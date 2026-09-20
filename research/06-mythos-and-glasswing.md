@@ -45,7 +45,7 @@ The UK AI Security Institute tested Mythos Preview on cyber ranges that simulate
 
 ## What "defending us" means, tightly
 
-The user's claim is that we are in some ways in a *better* position because Mythos-class systems are on the defensive side of the ledger. The documents support a version of that:
+This archive's claim is that we are in some ways in a *better* position because Mythos-class systems are on the defensive side of the ledger. The documents support a version of that:
 
 - Defenders at the firms that run browsers, clouds, kernels, and banks got the model first, on purpose.
 - They are using it to find and patch at a rate the industry has not had.

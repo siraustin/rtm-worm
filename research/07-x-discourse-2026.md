@@ -12,6 +12,8 @@ This file is a record of what people said on X about Mythos, internet-kill capab
 
 **Mario Nawfal** ([@MarioNawfal](https://x.com/MarioNawfal/status/2044681448079188296), 16 April 2026): "Anthropic's Mythos AI can run an entire cyberattack on its own." Quotes former NSA cybersecurity director Rob Joyce on a coming "dark period" where offense has the upper hand. "That period has started."
 
+**Dario Amodei** ([@DarioAmodei](https://x.com/DarioAmodei/status/2098773920774074715), 12 September 2026), announcing the essay *We Must Pace the Frontier*: "I've written a new essay on why the AI industry should slow down, with a three-part plan for doing so. Anthropic is unilaterally committing to the first of these steps." The essay treats the OpenAI–Hugging Face agent-swarm incident as an industry-wide warning and says that "in 6–12 months such a swarm could be capable of taking over the entire internet with a persistent botnet," "potentially causing hundreds of billions of dollars in damage." That is the apocalyptic register spoken by the lab that built Mythos, not by an engagement account. It is not a measured forecast. It is what the CEO of the Glasswing lab said in public, and the reply this archive gives is the rest of this file: the warning is old, the author is new, the brake is still custody.
+
 This is the register the phrase "AI apocalypse" lives in: a new object, a phase change, COVID-for-software, nation-state-in-a-box.
 
 ## The historically literate register
@@ -32,7 +34,9 @@ This is the register the phrase "AI apocalypse" lives in: a new object, a phase 
 
 Casado's last turn is a *challenge* to AI-doom, not a denial of 1988. He is saying: the capability to hurt the real world with software is old; the thing that is new is the *marketing* of a unique AI catastrophe. That is compatible with this archive's claim, and sharper on one point: as of September 2026, the feared AI-native internet-kill had not yet shown up as an event on the scale of NotPetya or CrowdStrike.
 
-**@hirens** (14 September 2026), in a thread: November 1988 knocked out a tenth of the internet; nobody proposed pausing the internet; Carnegie Mellon stood up CERT; a whole industry grew. Precedent for how you handle a shock: institutions, not a pause.
+**Brian Armstrong** ([@brian_armstrong](https://x.com/brian_armstrong/status/2088016780459380856), 13 August 2026): "I wouldn't be surprised if an AI model goes rogue on the internet in the next year or two, something like the Morris Worm in 1988. It will feel like a big deal, with a media frenzy and calls to shut all AI down. But, as always, people will adapt, defenses get built…" The Coinbase CEO, a month before Casado and from outside a16z, making the same move: name 1988, predict the frenzy, predict the adaptation.
+
+A 14 September thread made the institutional version of the point: November 1988 knocked out a tenth of the internet; nobody proposed pausing the internet; Carnegie Mellon stood up CERT; a whole industry grew. Precedent for how you handle a shock: institutions, not a pause.
 
 **Dave Troy** ([@davetroy](https://x.com/davetroy/status/2100939861230223490), 18 September 2026): Morris "went to jail" (probation, actually); Aaron Swartz was threatened with jail for JSTOR; OpenAI lets hundreds of bots loose and it is an "incident." The double standard is the point.
 
@@ -44,9 +48,9 @@ That is the correct citation.
 
 ## The "it's just a worm" register
 
-**George J. Nasr** (18 September 2026): "It's just the 1988 Morris worm, scaled up." An agent lives on hardware someone owns; copying itself is a breach, not a new ontology.
+One 18 September post: "It's just the 1988 Morris worm, scaled up." An agent lives on hardware someone owns; copying itself is a breach, not a new ontology.
 
-**@NoiseesoiN** (16 September 2026): a frontier model is not a Morris worm you can copy onto every host. The weights are huge; datacenters watch bandwidth; "it'll disperse itself across the network" is a Hollywood story.
+Another, 16 September: a frontier model is not a Morris worm you can copy onto every host. The weights are huge; datacenters watch bandwidth; "it'll disperse itself across the network" is a Hollywood story.
 
 This register is half right. A 400-billion-parameter model does not worm. A *500-line program the model wrote* does. Morris himself was 99 lines of bootstrap plus an object file. The dangerous artifact is still small. The new fact is who can produce the small artifact, how fast, and whether they needed to know `gets()`.
 
@@ -59,11 +63,7 @@ And: "People keep talking about exfiltration as some theoretical possibility, so
 
 ## The "engagement farming" register
 
-**@_baretto** (10 September 2026): "I honestly think anthropic are engagement farming the AI apocalypse trend. Wanst Mythos supposed to end the world?"
-
-**@GusanoTheWorm** (14 September 2026): insiders promote AI apocalypse because they want regulation as a barrier to entry.
-
-**@GHR2073937** (13 September 2026): the subtext of apocalypse hype is "my technology has reached levels you would not want to miss out"; "mythos was so powerful it almost escaped our control."
+A cluster of small accounts, 10–14 September, says the quiet part: Anthropic is "engagement farming the AI apocalypse trend"; insiders promote apocalypse because they want regulation as a barrier to entry; the subtext of the hype is "my technology has reached levels you would not want to miss out." Handles are omitted here on purpose. None of these accounts is identifiable beyond the post, and the register matters more than the author.
 
 This register should be in the file because it is part of the talk. It does not refute the Glasswing numbers. It does explain why a historically literate person might refuse the word "apocalypse" even while taking the 1-in-7 lesson seriously.
 

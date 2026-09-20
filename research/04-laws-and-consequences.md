@@ -6,7 +6,7 @@ If the technical story of 1988 is a magnitude error, the political story is the 
 
 Congress passed the Computer Fraud and Abuse Act in 1986, 18 U.S.C. § 1030, two years before the worm. It had not yet produced a jury conviction. The FBI's own history page still frames the legal question as it was asked in 1988: "But had Morris broken federal law? Turns out, he had."
 
-He was indicted in 1989, tried in the Northern District of New York, and convicted in January 1990 of violating § 1030(a)(5)(A) as it then read: intentionally accessing a federal-interest computer without authorization, and thereby causing loss of $1,000 or more. On 4 May 1990 Judge Howard G. Munson sentenced him to three years' probation, 400 hours of community service, a $10,050 fine, and the cost of supervision. The guidelines, had they been followed strictly, pointed at 21–27 months in prison. Munson said prison did not fit. The *Times*: the Justice Department had spent eight months deciding to prosecute at all, and at sentencing the government declined to recommend a number.
+He was indicted in 1989, tried in the Northern District of New York, and convicted in January 1990 of violating § 1030(a)(5)(A) as it then read: intentionally accessing a federal-interest computer without authorization, and thereby causing loss of $1,000 or more. On 4 May 1990 Judge Howard G. Munson sentenced him to three years' probation, 400 hours of community service, a $10,050 fine, and the cost of supervision. That was a departure below the federal sentencing guidelines, which called for prison time. Munson said prison did not fit. The *Times*: the Justice Department had spent eight months deciding to prosecute at all, and at sentencing the government declined to recommend a number.
 
 ## What the Second Circuit decided
 
@@ -36,7 +36,7 @@ This is the other half of "what stopped it." Not only a felony statute. An insti
 
 ## Ethics documents the incident produced
 
-RFC 1135 reprints, and RFC 1087 is, the Internet Activities Board's ethics statement of January 1989: unauthorized access, disruption of intended use, waste of resources, destruction of integrity, compromise of privacy — all "unethical and unacceptable." NSF's DAP said the same in November 1988. MIT already had a student statement. CPSR warned against closing the network in a panic.
+RFC 1135 reprints, and RFC 1087 is, the Internet Activities Board's ethics statement of January 1989 (local copy: `sources/rfc1087.txt`). It calls "unethical and unacceptable" any activity which purposely "(a) seeks to gain unauthorized access to the resources of the Internet, (b) disrupts the intended use of the Internet, (c) wastes resources (people, capacity, computer) through such actions, (d) destroys the integrity of computer-based information, and/or (e) compromises the privacy of users." Access to the Internet, it says, "is a privilege and should be treated as such." NSF's DAP said the same in November 1988. MIT already had a student statement. CPSR warned against closing the network in a panic.
 
 Cornell's own comment is the one this archive keeps:
 

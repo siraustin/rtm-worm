@@ -21,9 +21,9 @@ Ability was never the scarce resource after 2 November 1988.
 
 **"In some ways we are in a BETTER position now because MYTHOS is defending us."**
 
-**Supported, with a date stamp and a custody caveat.** Project Glasswing put the first Mythos-class model in the hands of the people who ship kernels, browsers, clouds, and bank software, with US-government involvement on the less-restricted sibling. Ten thousand-plus high/critical findings in a month is not a press release shape I can dismiss; partner numbers (Mozilla, Cloudflare, wolfSSL) are public enough to check. That is a structural improvement on 1988, when the first people to hold the search function were a graduate student and then a volunteer cabal on a mailing list.
+**Supported, with a date stamp and a custody caveat.** Project Glasswing put the first Mythos-class model in the hands of the people who ship kernels, browsers, clouds, and bank software, with US-government involvement on the less-restricted sibling. Ten thousand-plus high/critical findings in a month is not a press-release number this archive can dismiss; partner numbers (Mozilla, Cloudflare, wolfSSL) are public enough to check. That is a structural improvement on 1988, when the first people to hold the search function were a graduate student and then a volunteer cabal on a mailing list.
 
-It is better *because of a policy choice*, not because the physics changed. Anthropic says other labs will have the same class of model on a 6–12 month lag, and that it does not yet have safeguards it trusts for a fully public Mythos. Open-weight stacks are already being scored against ExploitBench. UK AISI is explicit that range success is not success against a defended enterprise.
+It is better *because of a policy choice*, not because the physics changed. Anthropic says other labs will have the same class of model on a 6–12 month lag, and that it does not yet have safeguards it trusts for a fully public Mythos. UK AISI is explicit that range success is not success against a defended enterprise.
 
 So: better position, rented, not owned. The rent is law, export control, and who is on the Glasswing list.
 
@@ -32,10 +32,10 @@ So: better position, rented, not owned. The rent is law, export control, and who
 - Historical 1988 facts (who, when, vectors, 1-in-7, CFAA, CERT): **high.** Primary documents in `sources/`.
 - Infected-host counts: **medium.** Order of thousands, not a census.
 - ARPANET/MILNET wording in public talk: **high that it's overstated; high that military research was hit.**
-- Lineage events: **high** on the well-studied ones (Slammer, NotPetya, CrowdStrike); I am not offering original incident response.
+- Lineage events: **high** on the well-studied ones (Slammer, NotPetya, CrowdStrike); this archive offers no original incident response.
 - Mythos capability: **high** that Anthropic and AISI reported what they reported; **medium** on how that translates to a well-defended, air-gapped, or even just competently patched target; **low** on any specific unpatched CVE that is still in coordinated disclosure.
 - "AI apocalypse" as a 2026 X phenomenon: **high** that the phrase and the Mythos-as-doom frame are in circulation; **high** that a historically literate counter-frame (Casado, CERT-not-pause, CFAA-already-exists) is also in circulation.
-- The overall thesis: **high.** I would argue it in front of someone who was in the room in 1988.
+- The overall thesis: **high.** It would hold up in front of someone who was in the room in 1988.
 
 ## The sentence to keep
 
