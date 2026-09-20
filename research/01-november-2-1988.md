@@ -1,42 +1,35 @@
-# 2 November 1988
+# 2 November 1988: the warning was on the same network
 
-At about 8:30 p.m. Eastern on Wednesday, 2 November 1988, a self-replicating program left a machine at MIT and began looking for other Unix hosts. By Thursday morning, system administrators at universities, national laboratories, and military research sites were watching load averages climb until machines became unusable. A Berkeley student mailed: "We are currently under attack."
+The rescue instructions had to travel through the system that needed rescuing.
 
-The author was Robert Tappan Morris, 23, a first-year Cornell computer-science graduate student, Harvard '88, son of Robert Morris Sr. — then chief scientist at the NSA's National Computer Security Center, and one of the people who had helped invent Unix password hashing at Bell Labs. The son released the program from MIT so it would not point straight back to Ithaca.
+After Robert Tappan Morris released his program from MIT on 2 November 1988, it multiplied faster than he expected. He contacted a Harvard friend; an anonymous message describing countermeasures followed. The appellate record says it arrived too late because its network route was clogged. That is a documented sequence, not a reconstructed scene. [S04, p. 506](09-bibliography.md)
 
-## What it was
+There was a second, less familiar obstruction. Once administrators recognized email software as one infection route, some shut down mail service. MIT's investigators report delays of up to twenty hours for critical messages at major forwarding nodes. Other infection routes remained available. A machine could lose the warning without losing the worm. [S02, §2.1.5](09-bibliography.md)
 
-RFC 1135, Joyce Reynolds, December 1989, still the Internet's own after-action report, calls the event "the helminthiasis of the Internet": infestation by parasitic worms. The program infected VAX computers and Sun-3 workstations running 4.2 and 4.3 Berkeley Unix. It was a worm, not a virus. It ran on its own. It did not need a host program.
+## What crossed the boundary
 
-It got in four ways, all already known in spirit to people who ran Unix:
+Morris was a first-year Cornell graduate student with considerable systems experience. The worm used flaws in sendmail and fingerd, trusted-host relationships, and password guessing. Its main executable bodies targeted VAX and Sun systems running BSD-derived Unix. These were not interchangeable paths: rsh used host trust; rexec used credentials. Calling both simply passwordless trust erases a meaningful distinction. [S04, pp. 505–506; S01, §2; S02, §§2.1.3–2.1.4](09-bibliography.md)
 
-1. **sendmail debug.** A non-standard `DEBUG` command, left on in many distributions, let a remote client pass commands. The worm used it as a delivery path.
-2. **fingerd.** On 4.3BSD VAX machines, the daemon used `gets()` with no bounds check. The worm overflowed the buffer and ran a small stub. This is the incident that taught a generation of programmers that `gets` is a loaded gun.
-3. **rsh / rexec and trusted hosts.** `.rhosts`, `/etc/hosts.equiv`, and the culture of "this machine trusts that machine" let the worm walk across local clusters without guessing anything.
-4. **Password guessing.** It tried empty passwords, the username, the username twice, the nickname, the last name, the last name backwards, a 432-word private dictionary, and `/usr/dict/words`.
+A worm can run and propagate as a program in its own right. It need not insert itself into a separate host program. Here, the resource-consuming replication was enough: no file-destruction payload was required. The absence of deleted files was not the absence of damage. [S01, §§1–2; S03, pp. 706–707](09-bibliography.md)
 
-The worm did not delete files. It did not install a backdoor for later use. It did not try to become root as a goal. It hid itself, guessed where to go next, and copied. Seeley, *A Tour of the Worm*: it did not propagate over UUCP, X.25, DECnet, or BITNET. It was a TCP/IP animal.
+The dangerous familiarity was that useful network relationships became routes for unwanted execution. The stranger who arrived did not need a new network. It used the one built for colleagues.
 
-## Who got hit
+## What the participants did not know yet
 
-FBI case summary, still on fbi.gov: Harvard, Princeton, Stanford, Johns Hopkins, NASA, Lawrence Livermore. The Second Circuit, when it later affirmed the conviction, said "leading universities, military sites, and medical research facilities." Cornell found copies of the worm in Morris's own account in stages of development through the afternoon of 2 November, structurally identical to the specimen Berkeley decompiled off the network.
+Finding the process did not settle how it entered. Closing one route did not settle whether another remained. Stopping the current copies did not make a still-vulnerable machine immune to its neighbors. The MIT analysis records ineffective quick remedies as well as successful ones; its account is far less tidy than a story in which everyone promptly found the same bug. [S02, §§2.3–2.4](09-bibliography.md)
 
-The famous number is **6,000 of about 60,000** internet-connected computers — 10 percent — within 24 hours. The FBI still uses it. Paul Graham, who was at Harvard, later wrote that he was in the room when the statistic was cooked: someone guessed 60,000 hosts and guessed 10 percent. Clifford Stoll, who fought the worm at the time, wrote that he surveyed the network and found about 2,000 machines "dead in the water" within fifteen hours, and that cleanup often took two days. Cornell declined to census the network, said several thousand were infected, said many thousands more had to be checked and patched, and said a population-dynamics estimate put the number nearer 3,000. MIT AI Lab: about 90 Unix machines infected of 300 in the lab, plus 50 HP machines the worm could enter but not rebuild itself on. Cornell campus: Krafft estimated 100–150. Berkeley: around 100.
+RFC 1135 describes the collaboration among responders and reports elimination from most computers within 48–72 hours. That is a recovery interval, not an exact duration for every site. It is also evidence that working technical intervention mattered. The worm did not wait for a court judgment to stop spreading. [S01, §3](09-bibliography.md)
 
-The order of magnitude is not in serious dispute. Thousands of hosts, a large fraction of the BSD Unix population, in hours.
+## How many?
 
-## What people did
+The Cornell commission's published findings say **several thousand infected computers**, expressly without a systematic census; many additional machines needed checking or preventive work. That distinction between infected and affected should survive every retelling. [S03, p. 707](09-bibliography.md)
 
-There was no CERT yet. Gene Spafford stood up the Phage mailing list. Berkeley and MIT teams decompiled the binary independently and compared notes on the phone in the middle of the night. Patches for sendmail and fingerd went out over the same network the worm was using. Sites disconnected from NSFNET to clean themselves without being recontaminated. Cornell isolated itself on the morning of 3 November and was back that evening. RFC 1135: most machines were cleaned in 48–72 hours; government and commercial sites were slower than the universities.
+The FBI's retrospective uses the familiar approximately 6,000 of 60,000, or ten percent. Keep it as a conventional estimate, not a measured count accurate to the nearest host. This revision removes the uncited campus-by-campus totals rather than pretending they reconcile into a national census. [S05](09-bibliography.md)
 
-Morris asked a Harvard friend, Andrew Sudduth, to post an anonymous apology and a hint at a kill. The message arrived late, because the mail system was the thing that was sick. He did not call his advisor, his chair, or anyone who could have acted nationally. Cornell: "minimal efforts," and a greater desire to remain anonymous.
+## What was he trying to do?
 
-John Markoff at the *New York Times* got the story. Sudduth, talking to the paper, slipped and used the initials RTM. The *Times* named him.
+The appellate court describes a goal of demonstrating inadequate security while spreading quietly. Cornell's findings distinguish likely non-destructive intent from reckless disregard of foreseeable consequences. Neither supports narration that confidently enters his mind and announces a cleanly designed internet census. [S04, pp. 505–506; S03, p. 707](09-bibliography.md)
 
-## What it was for
+The distinction matters. Calling it an experiment does not make it authorized. Calling it a national disruption does not prove he wanted a national disruption.
 
-Morris has said, then and later, that he wanted to measure the internet — to see how far a quiet program could walk. Cornell found no evidence he meant to destroy data or to knock machines over. Cornell also found that he designed the worm to hide, to persist even if discovered, and that given the design, uncontrollable replication was certain. "Reckless disregard of those probable consequences."
-
-The Cornell commission, which did not interview him (his lawyer invoked the Fifth while a grand jury was sitting), called the launch "a juvenile act that ignored the clear potential consequences." It rejected the press frame that he had done the community a favor by exposing Unix. Dennis Ritchie's own note in the Unix manual already said Unix was not developed with security in mind, "and this fact alone guarantees a vast number of holes."
-
-That is the opening fact of this archive. The holes were known. The network was trusted. One student, one night, one numeric choice.
+The next question is not why a program copied itself. It is why the copies failed to make room for one another. [Continue: the magnitude error](02-the-magnitude-error.md).

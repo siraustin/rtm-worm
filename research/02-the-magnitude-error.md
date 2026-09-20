@@ -1,47 +1,40 @@
-# The magnitude error
+# The magnitude error: the check that could fail open
 
-The worm's payload was replication. The disaster was the rate.
+**One-in-seven was real. The claim that it was the whole disaster was not.**
 
-## The check, and the override
+The Second Circuit's factual summary describes a mechanism meant to avoid duplicates, overridden one time in seven to defeat false claims that a machine was already infected. That is a useful explanation of the design's purpose. It is not a line-by-line specification of the program. [S04, p. 506](09-bibliography.md)
 
-Morris did not want a fork bomb. He wanted a census. A host that was already infected should not get another copy. He also did not want a system administrator to fake the "already infected" handshake and immunize a machine. So he coded an override.
+## Read the implementation account alongside the courtroom account
 
-The canonical description, used by Wikipedia, by the Second Circuit's fact summary, and by most later writing:
+Eichin and Rochlis describe the program sometimes skipping its **local check for another running copy** altogether. They also identify race conditions between arriving copies, failed coordination on overloaded machines, and work performed before a request to terminate took effect. In particular, simultaneous arrivals could miss one another; only one became a listener. More load could cause more timeouts in the check. [S02, §A.3.1, p. 8; §2.3.1, p. 5](09-bibliography.md)
 
-> The worm was designed so that it would not spread to computers that it had already infected. To prevent computers from defending against this by pretending to have the worm, however, it would still infect an already infected computer one out of seven times.
+This is the feedback loop the first draft underplayed:
 
-One in seven is about 14 percent. Each time the worm landed on a host that reported "I'm already here," it rolled a die and, on a 1, copied anyway.
+> Additional copies consume resources; resource pressure makes coordination less reliable; failed coordination allows additional copies to keep working.
 
-That is not a mysterious compiler bug. It is a parameter. The parameter was too large.
+That sentence is a synthesis of the MIT analysis, not a quotation or a calibrated growth law. Multiple processes, imperfect exclusion, delayed stopping, architecture, and contact patterns all matter. A scalar probability cannot substitute for them.
 
-## Why 14 percent is a catastrophe
+## An honest calculation
 
-On a network of tens of thousands of reachable Unix hosts, a worm that *never* reinfects will still spread to every vulnerable machine that the graph can reach. That is epidemiology: an R0 above 1 with no recovery. A worm that reinfects 14 percent of the time, on every pass, on a graph that also keeps scanning, does something worse. Each host accumulates copies. Each copy keeps scanning. Load average goes to the moon. Swap thrashes. The machine is up, in the sense that the kernel is running, and down, in the sense that no person can use it.
+Suppose, solely for illustration, that an independent event has probability p = 1/7 on each of k trials. Then:
 
-Cornell, February 1989:
+- Expected number of events: **k/7**.
+- Probability of at least one event: **1 − (6/7)^k**.
+- At 7 trials, that probability is about **66.0%**, not a guarantee of exactly one event.
+- At 20 trials, it is about **95.4%**.
 
-> There is no direct evidence to suggest that Morris intended for the worm to replicate uncontrollably. However, given Morris' evident knowledge of systems and networks, he knew or clearly should have known that such a consequence was certain, given the design of the worm.
+These results follow from the assumptions, not from measured worm traffic. They say nothing by themselves about time elapsed, number of infected hosts, CPU load, network topology, or whether a machine has failed. The historical program's random generator and interacting copies are not asserted to satisfy independent-trial assumptions.
 
-A 1993 law-review writeup of the case called it "a mathematical error" that "caused the worm to spread far more quickly and widely than he had anticipated." Later popular accounts say "order of magnitude." That is the right *kind* of sentence. A 1-in-70 or 1-in-700 override might have been a hedge. A 1-in-7 override, on the actual internet of 1988, is a fork bomb with extra steps.
+The revised browser interactive computes this probability. It does not invent a Unix load average, make every copy add a fixed amount of load, or declare that twelve copies rendered every machine unusable. Those were unsupported features of the original interactive.
 
-Michael O. Rabin's randomization mantra is sometimes cited as the inspiration for the probabilistic check. Rabin, told about the result, said Morris should have tried it on a simulator first.
+## What cannot be inferred
 
-## What it was not
+Changing the override to one-in-seventy or one-in-seven-hundred is not demonstrated to make the historical design safe. Other duplicate-control failures remain; even a perfectly implemented probability would need a time horizon and arrival model before supporting a resource bound.
 
-It was not a logic bomb. It was not ransomware. Seeley: it did not modify existing files, did not install Trojan horses, did not record or transmit decrypted passwords, did not try to capture superuser privileges as an objective.
+Likewise, an R0 above one is not a proof that every susceptible machine in a real network will be infected. Reachability, randomness, heterogeneous services, disconnections, and remediation all matter. Mathematical models are useful precisely when their assumptions remain visible.
 
-The "grappling hook" — a small portable C stub — ran on machines the main body could not fully infect, and pulled the VAX or Sun object over. Those peripheral hosts got loaded down anyway. Monoculture did the rest. Stoll: if every ARPANET host had been Berkeley Unix, the worm would have disabled all of them.
+## Why this is more interesting than a typo
 
-## The pattern that does not go away
+The dangerous choice was not simply that someone picked a large number. It was that the mechanism intended to keep the program inconspicuous was not a reliable limit on its behavior. It could keep doing useful work for itself after the conditions for safe operation had disappeared.
 
-A small integer, chosen by a person who is thinking about a different problem (evading a fake handshake; matching 21 inputs; shipping a channel file), applied to a system whose fan-out is enormous.
-
-- 1988: 1 in 7.
-- 2003: SQL Slammer, 376 bytes, doubling time ~8.5 seconds, because UDP and a single packet were enough.
-- 19 July 2024: CrowdStrike Channel File 291, a sensor expecting 21 values and receiving 20, an out-of-bounds read, 8.5 million Windows machines in a boot loop.
-
-The 2024 event was not a worm. It was a magnitude error in a *defender's* update, pushed to a concentrated installed base. That is the 1988 lesson with the sign flipped: the same class of mistake, now sitting inside the software that is supposed to prevent the 1988 class of attack.
-
-## What this file will not do
-
-It will not print the worm, the 432-word dictionary, or a reconstruction of the fingerd overflow. Those exist in museums, in RFC 1135's bibliography, at the Computer History Museum on a floppy, and in thirty years of operating-systems courses. They are not the point. The point is the rate.
+That is a comparison we can carry into later incidents. It does not require pretending that a worm and a faulty security update share an identical implementation.

