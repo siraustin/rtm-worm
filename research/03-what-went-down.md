@@ -1,57 +1,35 @@
 # What actually went down
 
-The claim in casual talk is that the Morris worm "took down ARPANET, defense networks, and basically the entire internet." That sentence is doing too much work. The documented event is still large enough that the extra work is unnecessary.
+A failed service, an infected host, a saturated link, a deliberately disconnected site, and a destroyed backbone are different events. The phrase 'the internet went down' can conceal all five.
 
-## Three networks, not one
+## The supported scope
 
-By 1988 the thing people now call "the internet" was already a federation:
+The contemporaneous accounts establish widespread disruption of vulnerable BSD-derived Unix hosts. The appellate opinion names educational institutions, military sites, and medical research facilities. The FBI retrospective identifies institutions including NASA and Lawrence Livermore. These sources establish important victims; they do not establish the collapse of every system at those institutions. [S01, §§2–3; S04, pp. 505–506; S05](09-bibliography.md)
 
-- **ARPANET**, the original DARPA packet network, in its last years. The ARPANET/MILNET split had happened in 1983. ARPANET in 1988 was a research network, not the classified military backbone.
-- **MILNET**, the unclassified military operational network, connected to the research internet only at controlled mailbridges.
-- **NSFNET**, the National Science Foundation backbone that actually carried most research traffic by then, plus regional networks hanging off it.
+The MIT investigators distinguish host failure from network failure and say the network itself performed its function. Some administrators then deliberately isolated their systems. Those decisions are part of the outage of useful service, but not evidence that the worm destroyed the transport infrastructure. [S02, §1.2 and §§2.4–3](09-bibliography.md)
 
-NSA's own post-mortem meeting, 8 November 1988, was titled *ARPANET/MILNET Computer Virus Attack of 3 November 1988*. That title is why later writers say "ARPANET" and "defense networks" in the same breath. It is a real document (National Security Archive, Document 01). It is not proof that classified systems fell.
+## ARPANET, MILNET, and the wording trap
 
-## What the worm could touch
+The National Computer Security Center's 8 November meeting really was titled *ARPANET/MILNET Computer Virus Attack of 3 November 1988*. Its title is evidence of what the meeting addressed, not proof that both networks collapsed. The underlying proceedings are a separate source from the archive's catalog description. [S26](09-bibliography.md)
 
-RFC 1135: VAX and Sun-3, 4.2/4.3 BSD. Cornell: Unix derived from CSRG work, including SunOS. The worm could *enter* some other Unixes (HP at MIT, for example) and fail to rebuild. It had no Windows, no IBM mainframe, no router OS, no X.25, no DECnet.
+The defensible sentence is: **university, laboratory, and military-site computers were among those affected.** Do not upgrade 'military sites' to 'classified operational networks' or 'the Pentagon went dark.' The public sources reviewed here do not establish either claim. Nor should an inability to establish such a claim be presented as a comprehensive forensic proof that no classified system experienced any indirect effect.
 
-Clifford Stoll's monoculture remark is the right counterfactual: if the research internet had been all Berkeley Unix, the worm would have disabled all of it. It wasn't, so it didn't.
+The original draft's exact mailbridge chronology and claims about which backbone carried most traffic require a stronger document-level audit before returning to the narrative. They are unnecessary to establish the central scope distinction.
 
-## Defense and military
+## Counts are not interchangeable
 
-Documented:
+Cornell distinguishes several thousand **infected** machines from additional machines **affected** through checking, preventive shutdowns, and remediation. Its commission did not conduct a systematic census. The familiar 6,000 estimate is suitable only with that uncertainty attached. [S03, p. 707; S05](09-bibliography.md)
 
-- The Second Circuit: "military sites."
-- FBI: NASA, Lawrence Livermore. "Vital military and university functions slowed to a crawl."
-- NASA Ames filed an incident report (still cited; a copy circulates as a public PDF).
-- The Defense Communications Agency inhibited the mailbridges between ARPANET and MILNET during the event, which is the act of a defender who thinks the unclassified military network is in the blast radius.
-- A follow-on, 29 November 1988: an FTP break-in on MILNET. That incident, on top of the worm, is part of why DARPA funded CERT.
+Do not turn the estimated fraction of an estimated 1988 host population into a direct comparison with today's total devices, total users, or total economic activity. Each denominator measures something else.
 
-Not documented, and should not be claimed:
+## Damage without deletion
 
-- That classified networks (SIPR, what would later be SIPRNet, JWICS, etc.) were taken down. They were not on this internet.
-- That the Pentagon "went dark" as an institution.
-- That MILNET collapsed. The split and the mailbridge shutdown are evidence of *containment*, which is the opposite of "defense networks fell."
+The Cornell findings report no modification or destruction of system or user data by the worm. The same findings describe lost availability and diverted staff time. These propositions are compatible. [S03, pp. 706–707](09-bibliography.md)
 
-So: **unclassified military and national-lab Unix was in the victim set.** Classified defense networks were not. Anyone who needs a one-line version can use the Second Circuit's: universities, military sites, medical research.
+The court records estimated remediation costs per installation from $200 to more than $53,000. That is not an audited nationwide total. This revision does not select an attractive midpoint from competing historical cost estimates or treat a later industry's estimate as a paid bill. [S04, p. 506](09-bibliography.md)
 
-## The internet itself
+## The sentence to use
 
-Cornell, on impact:
+**The worm made thousands of vulnerable computers unusable or severely impaired, including systems at important research and military sites; defensive isolation and delayed communications enlarged the disruption. It did not take down 'the entire internet' as one machine.**
 
-> Anecdotal evidence also suggests that slowdowns or shutdowns on infected and affected computers delayed research and other productive work, but no evidence of lasting damage has come to the Commission's attention. The main impact was on the time of hundreds of staff members around the nation.
-
-RFC 1135's reviewers, and the MIT team (Eichin & Rochlis), are explicit on a point that later myth-making drops: **the network layer did its job.** Packets moved. Mail piled up because *hosts* were sick, not because the backbone was destroyed. Sites then *chose* to partition — regional networks dropping off NSFNET — so they could clean without being reinfected. Wikipedia's summary of that partition ("the Internet was partitioned for several days") is right as operational history and easy to misread as "the internet was dead."
-
-Email was delayed for days. Some institutions wiped machines. Some stayed off the network for as long as a week. That is a real outage of *use*, not of *fiber*.
-
-## Cost
-
-GAO, via Stoll: $100,000 to $10 million. Per-site cleanup in the Second Circuit record: $200 to $53,000. An industry association floated $96 million; Cornell called that "self-serving" and "grossly exaggerated," because it priced hypothetical downtime and assumed 6,000 hosts at $16,000 each, "considering no work or data were irretrievably lost."
-
-The honest range is: millions, not billions; days, not months; hosts, not the substrate.
-
-## Why the inflated sentence persists
-
-"Took down the internet" is the sentence a newspaper can print. "Rendered a large fraction of BSD Unix hosts unusable and forced a defensive partition of NSFNET, including NASA and military research, via a 1-in-7 reinfection override" is the sentence the documents support. This archive uses the second sentence, and then says: that was already enough to prove the capability.
+That is already a consequential event. Making it larger than the evidence makes the argument easier to dismiss, not harder.

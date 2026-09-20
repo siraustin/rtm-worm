@@ -1,0 +1,15 @@
+name: research-and-site-checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check page structure and local links
+        run: python3 scripts/check.py
+      - name: Check probability mathematics and behavior
+        run: node tests/probability.test.js

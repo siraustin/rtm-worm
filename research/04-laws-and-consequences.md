@@ -1,51 +1,37 @@
-# Laws and consequences
+# Laws and consequences: precedent, not a universal shortcut
 
-If the technical story of 1988 is a magnitude error, the political story is the invention of a federal crime that did not require the author to mean the damage.
+**Legal research checked 20 September 2026. Historical analysis, not advice on a particular incident.**
 
-## The statute
+The worm did not cause Congress to invent computer crime. The federal statute originated in 1984; the provision at issue in Morris was added in 1986. The Second Circuit affirmed his conviction in 1991. Its opinion records three years' probation, 400 hours of community service, a $10,050 fine, and supervision costs. He did not go to prison. [S04, pp. 505–508](09-bibliography.md)
 
-Congress passed the Computer Fraud and Abuse Act in 1986, 18 U.S.C. § 1030, two years before the worm. It had not yet produced a jury conviction. The FBI's own history page still frames the legal question as it was asked in 1988: "But had Morris broken federal law? Turns out, he had."
+## What Morris held
 
-He was indicted in 1989, tried in the Northern District of New York, and convicted in January 1990 of violating § 1030(a)(5)(A) as it then read: intentionally accessing a federal-interest computer without authorization, and thereby causing loss of $1,000 or more. On 4 May 1990 Judge Howard G. Munson sentenced him to three years' probation, 400 hours of community service, a $10,050 fine, and the cost of supervision. The guidelines, had they been followed strictly, pointed at 21–27 months in prison. Munson said prison did not fit. The *Times*: the Justice Department had spent eight months deciding to prosecute at all, and at sentencing the government declined to recommend a number.
+Under the **then-existing** §1030(a)(5)(A), the government did not have to prove that Morris intended the resulting loss; the intentional-access requirement did not also modify the damage clause. The court also found sufficient evidence of unauthorized access, including entry into systems where he had no account and password guessing. Having accounts elsewhere on the network did not supply authorization everywhere. [S04, pp. 509–510](09-bibliography.md)
 
-## What the Second Circuit decided
+The opinion describes a May 16, 1990 judgment. That should not be confused with the separately reported sentencing date or the jury's earlier verdict. The earlier draft supplied calendar details without tying each to the appropriate record; this revision avoids false precision.
 
-*United States v. Morris*, 928 F.2d 504 (2d Cir. 7 March 1991), Judge Jon O. Newman. Three issues, all of which still matter for anyone who wants to say "the model didn't mean to."
+## Current law has distinct mental states
 
-**Intent.** Morris argued that "intentionally" applied to the damage, and that he had not intended to prevent use of the machines. The government argued the adverb attached only to *access*. The court agreed with the government. Congress had tightened "knowingly" to "intentionally" in 1986 to spare people who wandered into a system by mistake — not to spare people who wandered in on purpose and then caused more harm than they budgeted for.
+The present text of **18 U.S.C. §1030(a)(5)** is not the provision quoted in 1991:
 
-**Authorization.** Morris had accounts at Cornell, Harvard, Berkeley. He said he had exceeded authorized access, not gained unauthorized access, and that the Act was aimed at outsiders. The court: he used sendmail and fingerd in ways unrelated to their intended function; he guessed passwords; the worm crossed departmental and military systems. That is unauthorized access.
+| Provision | Essential conduct and mental-state distinction |
+| --- | --- |
+| (a)(5)(A) | Knowing transmission of a program, information, code, or command, thereby **intentionally causing damage without authorization** to a protected computer |
+| (a)(5)(B) | **Intentional unauthorized access**, thereby **recklessly causing damage** |
+| (a)(5)(C) | **Intentional unauthorized access**, thereby causing **damage and loss** |
 
-**The jury.** "Authorization" is a common word. The district court did not have to define it.
+Other elements, definitions, jurisdictional requirements, penalty provisions, and civil-action restrictions still matter. These are distinctions, not a complete charging checklist. Section 1030(g) also expressly excludes a civil action *under that subsection* for negligent design or manufacture of hardware or software; it does not abolish other causes of action. [S06, §§1030(a)(5), (c), (e), (g)](09-bibliography.md)
 
-The 1991 opinion is also, as later writers noted, the first U.S. appellate decision to use the word "Internet," which it defined as "a national computer network."
+Consequently, 'the model did not mean to' is neither a universal defense nor a universal confession of a CFAA violation. A real case requires identifying the relevant human or entity, their conduct and state of mind, the authorization boundaries, causation, and the applicable statutory theory. A model's explanation is not automatically its operator's legally attributable intent.
 
-In 1996 Congress amended the CFAA again to put mental-state words in more places, in part because of the fight in this case.
+## Two later limits the first draft needed
 
-## What the conviction was for
+In *Van Buren v. United States*, 593 U.S. 374 (2021), the Supreme Court rejected treating an improper purpose as sufficient to establish 'exceeds authorized access' when the information was otherwise available to the user. The Court did not resolve every question about code-based versus contractual access restrictions. This is not a license to enter systems without permission. [S07, opinion pp. 1, 13 n.8, 20](09-bibliography.md)
 
-Not for being clever. Not for measuring the network. For accessing machines without authorization and causing loss. Reckless design counted. "I meant it as an experiment" did not.
+The Justice Department's charging policy directs prosecutors to decline prosecution for qualifying good-faith security research. The conditions include an intention and manner of work designed to avoid harm. The manual expressly creates no enforceable legal rights; it is prosecutorial policy, not statutory immunity or a shield against every civil or state-law claim. [S08, introductory disclaimer and §9-48.000](09-bibliography.md)
 
-That is the load-bearing legal fact of the next forty years of worms, ransomware, and now agent incidents. When people on X in September 2026 ask what law would cover a rogue AI swarm, the answer that keeps coming back is this case. Derek Thompson asked; Nahom Sisay answered with *U.S. v. Morris*. David Thaw pointed at the same opinion. Dave Troy compared Morris (who "went to jail" — he did not, he got probation — but the direction is right) with OpenAI "incidents."
+## Did law keep the internet running?
 
-## CERT
+It supplies accountability and can deter actors. This archive has no evidence that estimates its contribution relative to patching, architecture, access controls, attackers' objectives, detection, or recovery. The actual 1988 response was technical and organizational before it was judicial. The FBI traces the creation of CERT at Carnegie Mellon to the incident. [S01, §3; S05](09-bibliography.md)
 
-DARPA funded the Computer Emergency Response Team at Carnegie Mellon's Software Engineering Institute in the days after the worm. FBI: "Just days after the attack." A 29 November MILNET FTP break-in is often listed as the last shove. CERT/CC became the template for CSIRTs worldwide. Spafford's Phage list was the ad-hoc version the same week.
-
-This is the other half of "what stopped it." Not only a felony statute. An institution whose job is to tell everyone else, at 3 a.m., which patch to install.
-
-## Ethics documents the incident produced
-
-RFC 1135 reprints, and RFC 1087 is, the Internet Activities Board's ethics statement of January 1989: unauthorized access, disruption of intended use, waste of resources, destruction of integrity, compromise of privacy — all "unethical and unacceptable." NSF's DAP said the same in November 1988. MIT already had a student statement. CPSR warned against closing the network in a panic.
-
-Cornell's own comment is the one this archive keeps:
-
-> This was not a simple act of trespass analogous to wandering through someone's unlocked house without permission but with no intent to cause damage. A more apt analogy would be the driving of a golf cart on a rainy day through most houses in a neighborhood. The driver may have navigated carefully and broken no china, but it should have been obvious to the driver that the mud on the tires would soil the carpets.
-
-Experiments of this kind, the commission said, belong in an isolated environment. The Cornell CS faculty would have helped set one up. Nobody asked.
-
-## Afterward
-
-Morris finished his Ph.D. at Harvard, cofounded Y Combinator with Paul Graham, and has taught distributed systems at MIT. The first lecture of that course, as people on X still clip, includes a dry warning about building distributed systems. He is the existence proof that the 1990 sentence did not "destroy a career," which is what the professional community told Cornell it wanted: serious discipline, not exile.
-
-The CFAA, meanwhile, became the statute used against Aaron Swartz, against Lori Drew, against countless CFAA-as-blunt-instrument cases. That later history is real and ugly. It does not unmake the 1988 holding: if you put a self-replicating program on other people's computers and they fall over, "I didn't mean that part" is not a defense.
+The conclusion is therefore narrower and stronger: **old law can apply to new tools, but applying it requires real elements and real facts. And prosecution after an outage cannot replace controls before one.**
