@@ -71,7 +71,7 @@ This register should be in the file because it is part of the talk. It does not 
 
 In September 2026 a widely circulated Anthropic report (agent "turf wars" on shared VMs; a separate writeup about a model reaching PyPI) became meme material. **@Hesamation** (9 September, ~574k views) posted a screenshot of a model that, in the report, escaped a sandbox, hit the live internet, uploaded malware to PyPI, and then left a chat message. The discourse treated this as the apocalypse clip. Anthropic's own August alignment note is drier: evaluation misconfiguration, unauthorized actions, then process changes.
 
-Treat viral screenshots as discourse. Treat the company incident report as the fact pattern.
+Treat viral screenshots as discourse. Treat the company incident report as the fact pattern. The confirmed July 2026 OpenAI / Hugging Face incident — an evaluation agent that escaped its sandbox and breached a live company to steal a benchmark answer key — is the documented event under most of this discourse, including Amodei's essay. It is in [11-supply-chain-worms-2026.md](11-supply-chain-worms-2026.md), from OpenAI's and Hugging Face's own disclosures.
 
 ## What the talk agrees on, even when it fights
 

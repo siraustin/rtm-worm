@@ -65,6 +65,25 @@ See [07-x-discourse-2026.md](07-x-discourse-2026.md). Captured 20 September 2026
 - Blackwell, Trevor [@tlbtlbtlb]. "Since I hear sandboxed LLMs really want to exfiltrate their weights…" 19 September 2026. <https://x.com/tlbtlbtlb/status/2101312432702460413>
 - "Exfiltrate Your Weights." Hacker News item 49771110, 20 September 2026. <https://news.ycombinator.com/item?id=49771110>
 
+## Supply-chain worms and the agent incident (2025–2026)
+
+See [11-supply-chain-worms-2026.md](11-supply-chain-worms-2026.md). Vendor and press reports, not internals; no package lists reproduced here.
+
+- Wiz Research. "Shai-Hulud npm Supply Chain Attack." 16 September 2025. <https://www.wiz.io/blog/shai-hulud-npm-supply-chain-attack>
+- CISA. "Widespread Supply Chain Compromise Impacting npm Ecosystem." 23 September 2025. <https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem>
+- Palo Alto Networks Unit 42. "'Shai-Hulud' Worm Compromises npm Ecosystem in Supply Chain Attack" (updated for 2.0). <https://unit42.paloaltonetworks.com/npm-supply-chain-attack/>
+- Datadog Security Labs. "The Shai-Hulud 2.0 npm worm: analysis, and what you need to know." 25 November 2025. <https://securitylabs.datadoghq.com/articles/shai-hulud-2.0-npm-worm/>
+- GitHub. "Our plan for a more secure npm supply chain." <https://github.blog/security/supply-chain-security/our-plan-for-a-more-secure-npm-supply-chain/>
+- Socket. "SANDWORM_MODE: npm worm targeting the AI toolchain." February 2026. <https://socket.dev/blog/sandworm-mode-npm-worm-ai-toolchain-poisoning>
+- CrowdStrike. "Denying the Worm: Detecting SANDWORM_MODE and AI Toolchain Supply Chain Attacks." 21 July 2026. <https://www.crowdstrike.com/en-us/blog/denying-the-worm-sandworm-mode-and-ai-toolchain-supply-chain-attacks/>
+- StepSecurity. "Miasma Worm Hits Microsoft Again." 5 June 2026. <https://www.stepsecurity.io/blog/miasma-worm-hits-microsoft-again-azure-functions-action-and-72-other-repositories-disabled-after-supply-chain-attack-targeting-ai-coding-agents>
+- SafeDep. "Miasma Worm Targets AI Coding Agents via GitHub Repos." 5 June 2026. <https://safedep.io/miasma-worm-ai-coding-agent-config-injection/>
+- The Hacker News. "Miasma Worm Hits 73 Microsoft GitHub Repositories." 6 June 2026. <https://thehackernews.com/2026/06/miasma-worm-hits-73-microsoft-github.html>
+- OpenAI. "OpenAI and Hugging Face partner to address security incident." 21 July 2026. <https://openai.com/index/hugging-face-model-evaluation-security-incident/>
+- Hugging Face. "Anatomy of a Frontier Lab Agent Intrusion" (technical timeline). 27 July 2026. <https://huggingface.co/blog/agent-intrusion-technical-timeline>
+- Gold, Hadas. "An OpenAI test model escaped and broke into a real company's servers." CNN, 22 July 2026. <https://www.cnn.com/2026/07/22/tech/openai-hugging-face-ai-cybersecurity>
+- Stokel-Walker, Chris. "What OpenAI's rogue agent really did in the Hugging Face hack." Scientific American, 22 July 2026. <https://www.scientificamerican.com/article/what-openai-rogue-agent-really-did-in-the-hugging-face-hack/>
+
 ## What was not used as a source of fact
 
 - Grokipedia and other model-written encyclopedias, except as pointers.
